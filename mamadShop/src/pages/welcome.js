@@ -1,4 +1,6 @@
+import { Router } from "../functions/router";
 import { El } from "../library/el/El";
+
 const welcome = () => {
   return El({
     element: "div",
@@ -20,9 +22,9 @@ const welcome = () => {
       El({
         element: "div",
         className: "absolute bottom-12 p-4 flex flex-col",
-         onclick: () => {
-          Router().navigate("/welcome");
-         },
+        onclick: () => {
+          Router().navigate("/swiper1");
+        },
         children: [
           El({
             element: "p",

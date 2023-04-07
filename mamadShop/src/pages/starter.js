@@ -1,9 +1,11 @@
-import { Router } from "../functions/router";
 import { El } from "../library/el/El";
+import { router } from "./../functions/router";
+
 const starter = () => {
   setTimeout(() => {
-    Router().navigate("/welcome");
-  }, 3000);
+    router.navigate("/welcome");
+    console.log("settimeout");
+  }, 1000);
   return El({
     element: "div",
     id: "starter",
