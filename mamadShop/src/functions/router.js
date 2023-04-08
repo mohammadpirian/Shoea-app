@@ -6,6 +6,8 @@ import swiper1 from "../pages/swipers/swiper1";
 import swiper2 from "../pages/swipers/swiper2";
 import swiper3 from "../pages/swipers/swiper3";
 import login from "../pages/login";
+import home from "../pages/home";
+import { datalogin } from "./datalogin";
 
 export const router = new Navigo("/");
 
@@ -34,6 +36,10 @@ export const Router = () => {
     })
     .on("/login", () => {
       changeContents(login);
+      datalogin();
+    })
+    .on("/home", () => {
+      changeContents(home);
     });
 
   router.resolve();

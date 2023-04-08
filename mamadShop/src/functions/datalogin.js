@@ -27,7 +27,7 @@ export let datalogin = () => {
       console.log(dataLgn.email);
       if (data.length === 1) {
         Cookies.set("token", data[0].email, { expires: 1 });
-        // location.reload();
+        location.reload();
         alert("Welcome to Mamad Shop 😎");
       }
     });

@@ -3,8 +3,8 @@ import { Router } from "./router";
 export const coockieSet = () => {
   if (Cookies.get("token")) {
     console.log("you have a token");
-    // Router().navigate("/swiper2");
+    Router().navigate("/home");
   } else {
-    Router().navigate("/login");
+    Router().navigate("/");
   }
 };

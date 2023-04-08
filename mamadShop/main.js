@@ -8,9 +8,9 @@ import { datalogin } from "./src/functions/datalogin";
 
 const root = document.getElementById("app");
 root.appendChild(App());
-Router().navigate("/login");
 coockieSet();
-datalogin();
+
+
 // const datalist = JSON.parse(localStorage.getItem("datalist")) || [];
 // const root = document.getElementById("app");
 // root.appendChild(App());

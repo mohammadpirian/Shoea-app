@@ -2,6 +2,7 @@ import { El } from "../library/el/El";
 import { router } from "./../functions/router";
 
 const login = () => {
+  // const svg = `<svg fill="#212529" width="25px" height="25px" viewBox="0 0 32.00 32.00" xmlns="http://www.w3.org/2000/svg" stroke="#212529" transform="rotate(0)" stroke-width="0.352"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.064"></g><g id="SVGRepo_iconCarrier"><path d="M27 18.039L16 9.501 5 18.039V14.56l11-8.54 11 8.538v3.481zm-2.75-.31v8.251h-5.5v-5.5h-5.5v5.5h-5.5v-8.25L16 11.543l8.25 6.186z"></path></g></svg>`;
   //   const htmlform = `
   // <div class="relative">
   //   <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
