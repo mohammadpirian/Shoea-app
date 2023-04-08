@@ -21,7 +21,7 @@ const login = () => {
       El({
         element: "img",
         id: "img-login",
-        className: "mt-24 h-[81px] w-[54px]",
+        className: "mt-[132px] h-[81px] w-[54px]",
         src: "./src/images/logo/logo-black.png",
         // onclick: () => {
         //   Router().navigate("/welcome");
@@ -31,14 +31,14 @@ const login = () => {
         element: "p",
         id: "",
         className:
-          "text-center mt-20 font-semibold text-[28px] w-[342px] h-[39px]",
+          "text-center mt-[118px] font-[600] text-[32px] w-[342px] h-[39px]",
         children: ["Login to Your Account"],
       }),
       El({
         element: "form",
         id: "loginForm",
         className:
-          "p-4 mt-6 w-full flex flex-col items-center justify-center gap-4",
+          "p-4 mt-[48px] w-full flex flex-col items-center justify-center gap-[21px]",
         children: [
           El({
             element: "input",
@@ -56,7 +56,7 @@ const login = () => {
           }),
           El({
             element: "label",
-            className: "text-[16px] mt-2",
+            className: "text-[16px] mt-[19px]",
             children: [
               El({
                 element: "input",
@@ -72,7 +72,7 @@ const login = () => {
             element: "button",
             type: "submit",
             className:
-              "border-none h-[37px] rounded-full bg-black w-full text-white mt-20",
+              "border-none h-[47px] rounded-full bg-black w-[380px] text-white absolute bottom-[32px]",
             children: "Sign In",
           }),
         ],

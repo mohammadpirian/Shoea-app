@@ -21,24 +21,24 @@ const welcome = () => {
       }),
       El({
         element: "div",
-        className: "absolute bottom-12 p-4 flex flex-col",
+        className: "absolute  p-4 flex flex-col",
         onclick: () => {
           Router().navigate("/swiper1");
         },
         children: [
           El({
             element: "p",
-            className: "text-white font-semibold text-[24px]",
+            className: "text-white font-semibold text-[40px] mb-[16px]",
             children: ["Welcome to 👋"],
           }),
           El({
             element: "p",
-            className: "text-white font-bold text-[40px]",
+            className: "text-white font-bold text-[72px] mb-[28px]",
             children: ["Shoea"],
           }),
           El({
             element: "p",
-            className: "text-white text-[13px]",
+            className: "text-white font-semibold text-[16px] mb-[44px]",
             children: [
               "The best sneakers & shoes e-commerse app of the century for your fashion needs!",
             ],

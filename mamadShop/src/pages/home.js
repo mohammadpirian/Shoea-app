@@ -9,13 +9,13 @@ const home = () => {
     children: [
       El({
         element: "nav",
-        id: "",
+        id: "top-nav",
         className:
-          "fixed flex w-full h-[80px] top-0 justify-between items-center px-2",
+          "fixed flex w-full h-[80px] top-0 justify-between items-center px-[24px]",
         children: [
           El({
             element: "div",
-            className: "flex gap-2",
+            className: "flex gap-[16px]",
             children: [
               El({
                 element: "button",
@@ -31,16 +31,16 @@ const home = () => {
               }),
               El({
                 element: "div",
-                className: "flex flex-col gap-1",
+                className: "flex flex-col gap-[4px]",
                 children: [
                   El({
                     element: "p",
-                    className: "font-[400] text-[16px] text-[#757475]",
+                    className: "font-[500] text-[16px] text-[#757475]",
                     children: ["Good Morning👋"],
                   }),
                   El({
                     element: "p",
-                    className: "font-[600] text-[16px]",
+                    className: "font-[700] text-[16px]",
                     children: ["Mohammad Pirian"],
                   }),
                 ],
@@ -49,7 +49,7 @@ const home = () => {
           }),
           El({
             element: "div",
-            className: "flex gap-2",
+            className: "flex gap-[16px]",
             children: [
               El({
                 element: "button",
@@ -82,7 +82,7 @@ const home = () => {
       El({
         element: "div",
         id: "search-brand",
-        className: "p-2 fixed w-full top-[80px]",
+        className: "p-[24px] fixed w-full top-[80px]",
         children: [
           El({
             element: "div",
@@ -97,14 +97,14 @@ const home = () => {
               }),
               El({
                 element: "img",
-                className: "absolute w-[18px] h-[18px] top-[18px] left-4",
+                className: "absolute w-[18px] h-[18px] top-[34px] left-8",
                 src: "./src/images/icon/search.svg",
               }),
             ],
           }),
           El({
             element: "div",
-            className: "mt-4",
+            className: "mt-[22px]",
             children: [
               El({
                 element: "div",
@@ -207,17 +207,12 @@ const home = () => {
                   }),
                 ],
               }),
-              El({
-                element: "div",
-                className: "",
-                children: [],
-              }),
             ],
           }),
 
           El({
             element: "div",
-            className: "mt-4",
+            className: "mt-[28px]",
             children: [
               El({
                 element: "div",
@@ -327,12 +322,89 @@ const home = () => {
               }),
             ],
           }),
+          El({
+            element: "div",
+            className: "",
+            children: [
+              El({
+                element: "div",
+                className: "flex justify-between mt-[19px] ",
+                children: [
+                  El({
+                    element: "p",
+                    className: "font-[600] text-[20px]",
+                    children: ["Most Popular"],
+                  }),
+                  El({
+                    element: "button",
+                    className: "font-[600] text-[16px]",
+                    children: ["See All"],
+                  }),
+                ],
+              }),
+              El({
+                element: "div",
+                className: "flex mt-[20px] gap-[12px] overflow-x-scroll",
+                children: [
+                  El({
+                    element: "button",
+                    className:
+                      "h-[39px] py-[10px] px-[20px] bg-gray-700 text-white rounded-full flex justify-center items-center",
+                    children: ["All"],
+                  }),
+                  El({
+                    element: "button",
+                    className:
+                      "h-[39px] px-[20px] text-gray-700 border-2 border-gray-700 rounded-full flex justify-center items-center",
+                    children: ["Nike"],
+                  }),
+                  El({
+                    element: "button",
+                    className:
+                      "h-[39px] px-[20px] text-gray-700 border-2 border-gray-700 rounded-full flex justify-center items-center",
+                    children: ["Adidias"],
+                  }),
+                  El({
+                    element: "button",
+                    className:
+                      "h-[39px] px-[20px] text-gray-700 border-2 border-gray-700 rounded-full flex justify-center items-center",
+                    children: ["Puma"],
+                  }),
+                  El({
+                    element: "button",
+                    className:
+                      "h-[39px] px-[20px] text-gray-700 border-2 border-gray-700 rounded-full flex justify-center items-center",
+                    children: ["Asics"],
+                  }),
+                  El({
+                    element: "button",
+                    className:
+                      "h-[39px] px-[20px] text-gray-700 border-2 border-gray-700 rounded-full flex justify-center items-center",
+                    children: ["Reebok"],
+                  }),
+                  El({
+                    element: "button",
+                    className:
+                      "h-[39px] px-[20px]  text-gray-700 border-2 border-gray-700 rounded-full flex justify-center items-center",
+                    children: ["NewBalance"],
+                  }),
+                  El({
+                    element: "button",
+                    className:
+                      "h-[39px] px-[20px] text-gray-700 border-2 border-gray-700 rounded-full flex justify-center items-center",
+                    children: ["Converse"],
+                  }),
+                ],
+              }),
+            ],
+          }),
         ],
       }),
       El({
         element: "nav",
         id: "bottom-nav",
-        className: "fixed flex w-full h-[66px] bottom-0 justify-between px-8",
+        className:
+          "fixed flex w-full h-[66px] bottom-0 justify-between px-[48px]",
         children: [
           El({
             element: "button",

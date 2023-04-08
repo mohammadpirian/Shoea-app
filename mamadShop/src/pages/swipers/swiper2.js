@@ -9,7 +9,7 @@ const swiper2 = () => {
       El({
         element: "img",
         id: "img-swiper2",
-        className: "h-[400px] w-full",
+        className: "h-[600px] w-full",
         src: "./src/images/img/3.png",
         // onclick: () => {
         //   Router().navigate("/welcome");
@@ -17,22 +17,22 @@ const swiper2 = () => {
       }),
       El({
         element: "div",
-        className: "flex flex-col items-center justify-center p-4",
+        className: "flex flex-col items-center justify-center px-4",
         children: [
           El({
             element: "p",
-            className: "font-semibold text-[24px] text-center mt-2",
+            className: "font-[700] text-[32px] text-center mt-[32px]",
             children: ["Your satisfaction is our number one periority"],
           }),
           El({
             element: "img",
-            className: "w-20 mt-6",
+            className: "w-[102px] mt-[59px]",
             src: "./src/images/assets/2of3.png",
           }),
           El({
             element: "button",
             className:
-              "bg-gray-800 p-1 w-full rounded-full text-white mt-4 hover:bg-gray-600",
+              "bg-gray-800 h-[47px] w-[380px] rounded-full text-white absolute bottom-[32px] hover:bg-gray-600",
             children: ["Next"],
             onclick: () => {
               Router().navigate("/swiper3");

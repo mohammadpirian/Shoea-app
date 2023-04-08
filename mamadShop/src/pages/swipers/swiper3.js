@@ -10,7 +10,7 @@ const swiper3 = () => {
       El({
         element: "img",
         id: "img-swiper3",
-        className: "h-[400px] w-full",
+        className: "h-[600px] w-full",
         src: "./src/images/img/4.png",
         // onclick: () => {
         //   Router().navigate("/welcome");
@@ -18,26 +18,25 @@ const swiper3 = () => {
       }),
       El({
         element: "div",
-        className: "flex flex-col items-center justify-center p-4",
+        className: "flex flex-col items-center justify-center px-4",
         children: [
           El({
             element: "p",
-            className: "font-semibold text-[20px] text-center mt-2",
+            className: "font-[700] text-[32px] text-center mt-[32px]",
             children: ["Let’s fulfill your fashion needs with shoearight now!"],
           }),
           El({
             element: "img",
-            className: "w-20 mt-6",
+            className: "w-[102px] mt-[14px]",
             src: "./src/images/assets/3of3.png",
           }),
           El({
             element: "button",
             className:
-              "bg-gray-800 p-1 w-full rounded-full text-white mt-4 hover:bg-gray-600",
+              "bg-gray-800 h-[47px] w-[380px] rounded-full text-white absolute bottom-[32px] hover:bg-gray-600",
             children: ["Get Started"],
             onclick: () => {
               Router().navigate("/login");
-              
             },
           }),
         ],

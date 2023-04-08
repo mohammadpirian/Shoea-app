@@ -9,13 +9,12 @@ const starter = () => {
   return El({
     element: "div",
     id: "starter",
-    className:
-      "w-screen h-screen flex flex-col justify-between items-center py-32",
+    className: "w-screen h-screen flex flex-col justify-between items-center",
     children: [
       El({
         element: "img",
         id: "img-starter",
-        className: "mt-24",
+        className: "mt-[394px]",
         src: "./src/images/logo/shoea.png",
         // onclick: () => {
         //   Router().navigate("/welcome");
@@ -24,7 +23,7 @@ const starter = () => {
       El({
         element: "img",
         id: "img-starter",
-        className: "w-10 h-10",
+        className: "w-[48px] h-[48px] mb-[117px]",
         src: "./src/images/loading/1.gif",
       }),
     ],
