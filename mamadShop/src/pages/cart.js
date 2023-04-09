@@ -12,7 +12,65 @@ const cart = () => {
         id: "",
         className:
           "fixed flex w-full h-[80px] top-0 justify-between items-center px-[24px]",
-        children: [El({})],
+        children: [
+          El({
+            element: "div",
+            className: "flex",
+            children: [
+              El({
+                element: "img",
+                className: "w-[30px] ",
+                src: "./src/images/logo/logo-black.png",
+              }),
+              El({
+                element: "p",
+                className: "font-[600] text-[30px] ml-4 font-mono",
+                children: ["My Cart"],
+              }),
+            ],
+          }),
+          El({
+            element: "button",
+            className: "",
+            children: [
+              El({
+                element: "img",
+                className: "w-[30px] h-[30px]",
+                src: "./src/images/icon/search.svg",
+              }),
+            ],
+          }),
+        ],
+      }),
+      El({
+        element: "nav",
+        id: "",
+        className:
+          "fixed flex w-full h-[110px] bottom-[66px] items-center justify-between px-[24px] rounded-t-3xl",
+        children: [
+          El({
+            element: "div",
+            className: "",
+            children: [
+              El({
+                element: "p",
+                className: "w-[90px] ",
+                children: ["Total Price"],
+              }),
+              El({
+                element: "p",
+                className: "font-[700] text-[24px]",
+                children: ["$00"],
+              }),
+            ],
+          }),
+          El({
+            element: "button",
+            className:
+              "w-[260px] h-[55px] shadow-2xl bg-black text-white rounded-full ",
+            children: ["Checkout →"],
+          }),
+        ],
       }),
       El({
         element: "nav",
