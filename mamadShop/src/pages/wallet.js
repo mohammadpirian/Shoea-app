@@ -9,41 +9,23 @@ const wallet = () => {
     children: [
       El({
         element: "nav",
-        id: "top-nav",
+        id: "",
         className:
           "fixed flex w-full h-[80px] top-0 justify-between items-center px-[24px]",
         children: [
           El({
             element: "div",
-            className: "flex gap-[16px]",
+            className: "flex",
             children: [
               El({
-                element: "button",
-                id: "",
-                className: " flex flex-col justify-center items-center",
-                children: [
-                  El({
-                    element: "img",
-                    className: "w-[48px] h-[48px] rounded-full",
-                    src: "./src/images/img/me.jpg",
-                  }),
-                ],
+                element: "img",
+                className: "w-[30px] ",
+                src: "./src/images/logo/logo-black.png",
               }),
               El({
-                element: "div",
-                className: "flex flex-col gap-[4px]",
-                children: [
-                  El({
-                    element: "p",
-                    className: "font-[500] text-[16px] text-[#757475]",
-                    children: ["Good Morning👋"],
-                  }),
-                  El({
-                    element: "p",
-                    className: "font-[700] text-[16px]",
-                    children: ["Mohammad Pirian"],
-                  }),
-                ],
+                element: "p",
+                className: "font-[600] text-[30px] ml-4 font-mono",
+                children: ["My Wallet"],
               }),
             ],
           }),
@@ -53,25 +35,23 @@ const wallet = () => {
             children: [
               El({
                 element: "button",
-                id: "notification-btn",
-                className: " flex flex-col justify-center items-center",
+                className: "",
                 children: [
                   El({
                     element: "img",
                     className: "w-[24px] h-[24px]",
-                    src: "./src/images/icon/bell.svg",
+                    src: "./src/images/icon/search.svg",
                   }),
                 ],
               }),
               El({
                 element: "button",
-                id: "like-btn",
-                className: " flex flex-col justify-center items-center",
+                className: "",
                 children: [
                   El({
                     element: "img",
                     className: "w-[24px] h-[24px]",
-                    src: "./src/images/icon/like.svg",
+                    src: "./src/images/icon/more.svg",
                   }),
                 ],
               }),

@@ -35,7 +35,7 @@ const cart = () => {
             children: [
               El({
                 element: "img",
-                className: "w-[30px] h-[30px]",
+                className: "w-[24px] h-[24px]",
                 src: "./src/images/icon/search.svg",
               }),
             ],
