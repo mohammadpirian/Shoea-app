@@ -414,7 +414,7 @@ const home = () => {
               El({
                 element: "img",
                 className: "w-[24px] h-[24px]",
-                src: "./src/images/icon/home.svg",
+                src: "./src/images/icon/home-select.svg",
               }),
               El({
                 element: "p",
@@ -427,6 +427,9 @@ const home = () => {
             element: "button",
             id: "cart-btn",
             className: " flex flex-col justify-center items-center",
+            onclick: () => {
+              Router().navigate("/cart");
+            },
             children: [
               El({
                 element: "img",
@@ -444,6 +447,9 @@ const home = () => {
             element: "button",
             id: "orders-btn",
             className: " flex flex-col justify-center items-center",
+            onclick: () => {
+              Router().navigate("/orders");
+            },
             children: [
               El({
                 element: "img",
@@ -461,6 +467,9 @@ const home = () => {
             element: "button",
             id: "Wallet-btn",
             className: " flex flex-col justify-center items-center",
+            onclick: () => {
+              Router().navigate("/wallet");
+            },
             children: [
               El({
                 element: "img",
@@ -478,6 +487,9 @@ const home = () => {
             element: "button",
             id: "profile-btn",
             className: " flex flex-col justify-center items-center",
+            onclick: () => {
+              Router().navigate("/profile");
+            },
             children: [
               El({
                 element: "img",

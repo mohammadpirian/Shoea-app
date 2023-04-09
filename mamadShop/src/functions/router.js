@@ -7,6 +7,10 @@ import swiper2 from "../pages/swipers/swiper2";
 import swiper3 from "../pages/swipers/swiper3";
 import login from "../pages/login";
 import home from "../pages/home";
+import cart from "../pages/cart";
+import orders from "../pages/orders";
+import wallet from "../pages/wallet";
+import profile from "../pages/profile";
 import { datalogin } from "./datalogin";
 
 export const router = new Navigo("/");
@@ -40,6 +44,18 @@ export const Router = () => {
     })
     .on("/home", () => {
       changeContents(home);
+    })
+    .on("/cart", () => {
+      changeContents(cart);
+    })
+    .on("/orders", () => {
+      changeContents(orders);
+    })
+    .on("/wallet", () => {
+      changeContents(wallet);
+    })
+    .on("/profile", () => {
+      changeContents(profile);
     });
 
   router.resolve();
