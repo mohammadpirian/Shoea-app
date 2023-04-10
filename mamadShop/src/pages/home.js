@@ -2,6 +2,7 @@ import { Router } from "../functions/router";
 import { El } from "../library/el/El";
 import getproductone from "../functions/axios/getpriductone";
 import getproduct from "../functions/axios/getproduct";
+import productModal from "../modals/productModal";
 
 const home = async () => {
   try {
@@ -16,7 +17,7 @@ const home = async () => {
           element: "nav",
           id: "top-nav",
           className:
-            "fixed flex w-full h-[80px] top-0 justify-between items-center px-[24px] bg-white",
+            "fixed flex w-full h-[80px] top-0 justify-between items-center px-[24px] bg-white z-10",
           children: [
             El({
               element: "div",
@@ -87,7 +88,7 @@ const home = async () => {
         El({
           element: "div",
           id: "search-brand",
-          className: "p-[24px] fixed w-full top-[80px] bg-white",
+          className: "p-[24px] fixed w-full top-[80px] bg-white z-10",
           children: [
             El({
               element: "div",
@@ -410,18 +411,44 @@ const home = async () => {
           element: "div",
           id: "products-home",
           className:
-            "p-[24px] absolute w-full top-[480px] flex flex-wrap gap-4 overflow-y-scroll no-scrollbar -z-10",
+            "p-[24px] absolute w-full top-[480px] flex flex-wrap justify-center gap-4 overflow-y-scroll no-scrollbar ",
           children: data.map((item) => {
             return El({
               element: "div",
               id: `${item.id}`,
-              className:
-                "w-[182px] h-[182px] bg-gray-100 shadow-lg rounded-2xl",
+              onclick: () => {
+                productModal();
+                console.log(id);
+              },
+              className: "",
               children: [
                 El({
-                  element: "img",
-                  className: "rounded-2xl w-full h-full",
-                  src: `${item.images}`,
+                  element: "div",
+                  className:
+                    "w-[182px] h-[182px] bg-gray-100 shadow-lg rounded-2xl",
+                  children: [
+                    El({
+                      element: "img",
+                      className: "rounded-2xl w-full h-full",
+                      src: `${item.images}`,
+                    }),
+                  ],
+                }),
+                El({
+                  element: "div",
+                  className: "mt-3",
+                  children: [
+                    El({
+                      element: "p",
+                      className: "font-[700] text-[20px]",
+                      children: [`${item.title}`],
+                    }),
+                    El({
+                      element: "p",
+                      className: "font-[600] text-[16px]",
+                      children: [`$ ${item.price}`],
+                    }),
+                  ],
                 }),
               ],
             });
@@ -443,7 +470,7 @@ const home = async () => {
           element: "nav",
           id: "bottom-nav",
           className:
-            "fixed flex w-full h-[66px] bottom-0 justify-between px-[48px] bg-white",
+            "fixed flex w-full h-[66px] bottom-0 justify-between px-[48px] bg-white z-10",
           children: [
             El({
               element: "button",
