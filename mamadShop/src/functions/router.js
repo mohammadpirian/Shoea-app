@@ -20,6 +20,14 @@ const changeContents = (target) => {
   root.innerHTML = "";
   root.append(target());
 };
+const changeContents2 = (target) => {
+  target().then((res) => {
+    const root = document.getElementById("rootsEl");
+    root.innerHTML = "";
+    console.log(res);
+    root.append(res);
+  });
+};
 
 export const Router = () => {
   router
@@ -52,7 +60,7 @@ export const Router = () => {
       changeContents(orders);
     })
     .on("/wallet", () => {
-      changeContents(wallet);
+      changeContents2(wallet);
     })
     .on("/profile", () => {
       changeContents(profile);
@@ -66,3 +74,5 @@ export const Router = () => {
 
 //   root.append(starter());
 // })
+
+console.log(wallet());

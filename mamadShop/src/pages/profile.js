@@ -9,7 +9,7 @@ const profile = () => {
     children: [
       El({
         element: "nav",
-        id: "top-nav",
+        id: "",
         className:
           "fixed flex w-full h-[80px] top-0 justify-between items-center px-[24px]",
         children: [
@@ -81,7 +81,7 @@ const profile = () => {
       }),
       El({
         element: "nav",
-        id: "bottom-nav",
+        id: "",
         className:
           "fixed flex w-full h-[66px] bottom-0 justify-between px-[48px]",
         children: [

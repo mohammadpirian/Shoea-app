@@ -344,7 +344,8 @@ const home = () => {
               }),
               El({
                 element: "div",
-                className: "flex mt-[20px] gap-[12px] overflow-x-scroll",
+                className:
+                  "flex mt-[20px] gap-[12px] overflow-x-scroll no-scrollbar",
                 children: [
                   El({
                     element: "button",
@@ -399,6 +400,14 @@ const home = () => {
             ],
           }),
         ],
+      }),
+      El({
+        element: "div",
+        id: "products-home",
+        className: "p-[24px] fixed w-full top-[490px] flex flex-wrap",
+        children:[
+          
+        ]
       }),
       El({
         element: "nav",

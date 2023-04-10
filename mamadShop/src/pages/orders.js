@@ -61,7 +61,7 @@ const orders = () => {
       }),
       El({
         element: "nav",
-        id: "bottom-nav",
+        id: "",
         className:
           "fixed flex w-full h-[66px] bottom-0 justify-between px-[48px]",
         children: [
