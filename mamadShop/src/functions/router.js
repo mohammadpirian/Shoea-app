@@ -51,7 +51,7 @@ export const Router = () => {
       datalogin();
     })
     .on("/home", () => {
-      changeContents(home);
+      changeContents2(home);
     })
     .on("/cart", () => {
       changeContents(cart);
