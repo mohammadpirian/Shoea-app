@@ -5,7 +5,7 @@ import getproduct from "../functions/axios/getproduct";
 
 const home = async () => {
   try {
-    const { data } = await getproductone(1);
+    const { data } = await getproduct();
 
     return El({
       element: "div",
@@ -410,97 +410,34 @@ const home = async () => {
           element: "div",
           id: "products-home",
           className:
-            "p-[24px] absolute w-full top-[480px] flex flex-wrap gap-4 overflow-y-scroll -z-10",
-          children: [
-            El({
+            "p-[24px] absolute w-full top-[480px] flex flex-wrap gap-4 overflow-y-scroll no-scrollbar -z-10",
+          children: data.map((item) => {
+            return El({
               element: "div",
-              className: "w-[182px] h-[182px] bg-gray-100 rounded-2xl",
+              id: `${item.id}`,
+              className:
+                "w-[182px] h-[182px] bg-gray-100 shadow-lg rounded-2xl",
               children: [
                 El({
                   element: "img",
-                  className: "rounded-2xl",
-                  src: `${data.images}`,
+                  className: "rounded-2xl w-full h-full",
+                  src: `${item.images}`,
                 }),
               ],
-            }),
-            El({
-              element: "div",
-              className: "w-[182px] h-[182px] bg-gray-100 rounded-2xl",
-              children: [
-                El({
-                  element: "img",
-                  className: "rounded-2xl",
-                  src: `${data.images}`,
-                }),
-              ],
-            }),
-            El({
-              element: "div",
-              className: "w-[182px] h-[182px] bg-gray-100 rounded-2xl",
-              children: [
-                El({
-                  element: "img",
-                  className: "rounded-2xl",
-                  src: `${data.images}`,
-                }),
-              ],
-            }),
-            El({
-              element: "div",
-              className: "w-[182px] h-[182px] bg-gray-100 rounded-2xl",
-              children: [
-                El({
-                  element: "img",
-                  className: "rounded-2xl",
-                  src: `${data.images}`,
-                }),
-              ],
-            }),
-            El({
-              element: "div",
-              className: "w-[182px] h-[182px] bg-gray-100 rounded-2xl",
-              children: [
-                El({
-                  element: "img",
-                  className: "rounded-2xl",
-                  src: `${data.images}`,
-                }),
-              ],
-            }),
-            El({
-              element: "div",
-              className: "w-[182px] h-[182px] bg-gray-100 rounded-2xl",
-              children: [
-                El({
-                  element: "img",
-                  className: "rounded-2xl",
-                  src: `${data.images}`,
-                }),
-              ],
-            }),
-            El({
-              element: "div",
-              className: "w-[182px] h-[182px] bg-gray-100 rounded-2xl",
-              children: [
-                El({
-                  element: "img",
-                  className: "rounded-2xl",
-                  src: `${data.images}`,
-                }),
-              ],
-            }),
-            El({
-              element: "div",
-              className: "w-[182px] h-[182px] bg-gray-100 rounded-2xl",
-              children: [
-                El({
-                  element: "img",
-                  className: "rounded-2xl",
-                  src: `${data.images}`,
-                }),
-              ],
-            }),
-          ],
+            });
+          }),
+          // El({
+          //   element: "div",
+          //   className:
+          //     "w-[182px] h-[182px] bg-gray-100 shadow-lg rounded-2xl",
+          //   children: [
+          //     El({
+          //       element: "img",
+          //       className: "rounded-2xl w-full h-full",
+          //       src: `${data.images}`,
+          //     }),
+          //   ],
+          // }),
         }),
         El({
           element: "nav",
