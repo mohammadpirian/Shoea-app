@@ -12,22 +12,36 @@ const productModal = async (dataid) => {
       element: "div",
       id: "",
       className:
-        "w-screen h-screen absolute flex flex-col justify-between bg-white divide-y divide-slate-200 overflow-y-hidden",
+        "w-screen h-screen absolute flex flex-col bg-white divide-y divide-slate-200 overflow-y-hidden",
       children: [
         El({
-          element: "div",
-          className: "w-full h-92",
+          element: "button",
+          className: "absolute top-6 left-6",
+          onclick: () => {
+            history.back();
+          },
           children: [
             El({
               element: "img",
-              className: "w-full  h-full cover",
+              className: "w-6 h-4",
+              src: "http://localhost:5173/src/images/icon/back.svg",
+            }),
+          ],
+        }),
+        El({
+          element: "div",
+          className: "w-full h-96 overflow-hidden",
+          children: [
+            El({
+              element: "img",
+              className: "w-full  h-full ",
               src: `${data.images}`,
             }),
           ],
         }),
         El({
           element: "div",
-          className: "w-full ",
+          className: "w-full flex flex-col py-6 gap-2",
           children: [
             El({
               element: "div",
@@ -53,7 +67,7 @@ const productModal = async (dataid) => {
             }),
             El({
               element: "div",
-              className: "w-full flex gap-2 px-6 py-6 items-center",
+              className: "w-full flex gap-2 px-6 items-center",
               children: [
                 El({
                   element: "div",
@@ -93,9 +107,9 @@ const productModal = async (dataid) => {
               element: "p",
               className: "",
               children: [
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente magni excepturi",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente magni excepturi ",
                 El({
-                  element: "p",
+                  element: "span",
                   className: "font-[700]",
                   children: ["view more.."],
                 }),
@@ -118,21 +132,29 @@ const productModal = async (dataid) => {
                       element: "div",
                       className: "flex gap-2",
                       children: [
-                        El({
-                          element: "button",
-                          className: "border border-black w-8 h-8 rounded-full",
-                          children: [`40`],
+                        ...data.size.map((item) => {
+                          // console.log(item);
+                          return El({
+                            element: "button",
+                            className: `border border-black w-8 h-8 rounded-full`,
+                            children: [`${item}`],
+                          });
                         }),
-                        El({
-                          element: "button",
-                          className: "border border-black w-8 h-8 rounded-full",
-                          children: [`41`],
-                        }),
-                        El({
-                          element: "button",
-                          className: "border border-black w-8 h-8 rounded-full",
-                          children: [`42`],
-                        }),
+                        // El({
+                        //   element: "button",
+                        //   className: "border border-black w-8 h-8 rounded-full",
+                        //   children: [`40`],
+                        // }),
+                        // El({
+                        //   element: "button",
+                        //   className: "border border-black w-8 h-8 rounded-full",
+                        //   children: [`41`],
+                        // }),
+                        // El({
+                        //   element: "button",
+                        //   className: "border border-black w-8 h-8 rounded-full",
+                        //   children: [`42`],
+                        // }),
                       ],
                     }),
                   ],
@@ -150,33 +172,13 @@ const productModal = async (dataid) => {
                       element: "div",
                       className: "flex gap-2",
                       children: [
-                        // data.color.map((item) => {
-                        //   console.log(item);
-                        //   return El({
-                        //     element: "button",
-                        //     className: `w-8 h-8 rounded-full bg-${item}-700`,
-                        //     children: [``],
-                        //   });
-                        // }),
-                        El({
-                          element: "button",
-                          className: "w-8 h-8 rounded-full bg-red-700",
-                          children: [``],
-                        }),
-                        El({
-                          element: "button",
-                          className: "w-8 h-8 rounded-full bg-green-700",
-                          children: [``],
-                        }),
-                        El({
-                          element: "button",
-                          className: "w-8 h-8 rounded-full bg-yellow-700",
-                          children: [``],
-                        }),
-                        El({
-                          element: "button",
-                          className: "w-8 h-8 rounded-full bg-black",
-                          children: [``],
+                        ...data.color.map((item) => {
+                          // console.log(item);
+                          return El({
+                            element: "button",
+                            className: `w-8 h-8 rounded-full bg-${item}-700`,
+                            children: [``],
+                          });
                         }),
                       ],
                     }),
