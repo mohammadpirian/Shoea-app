@@ -11,6 +11,7 @@ import cart from "../pages/cart";
 import orders from "../pages/orders";
 import wallet from "../pages/wallet";
 import profile from "../pages/profile";
+import productModal from "../pages/productModal";
 import { datalogin } from "./datalogin";
 
 export const router = new Navigo("/");
@@ -20,11 +21,12 @@ const changeContents = (target) => {
   root.innerHTML = "";
   root.append(target());
 };
-const changeContents2 = (target) => {
-  target().then((res) => {
+const changeContents2 = (target, item) => {
+  console.log(item);
+  target(item).then((res) => {
     const root = document.getElementById("rootsEl");
     root.innerHTML = "";
-    console.log(res);
+    // console.log(res);
     root.append(res);
   });
 };
@@ -64,6 +66,9 @@ export const Router = () => {
     })
     .on("/profile", () => {
       changeContents(profile);
+    })
+    .on("/product/:id", (item) => {
+      changeContents2(productModal, item.data.id);
     });
 
   router.resolve();
@@ -75,4 +80,4 @@ export const Router = () => {
 //   root.append(starter());
 // })
 
-console.log(wallet());
+// console.log(wallet());

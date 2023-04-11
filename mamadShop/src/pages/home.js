@@ -2,7 +2,7 @@ import { Router } from "../functions/router";
 import { El } from "../library/el/El";
 import getproductone from "../functions/axios/getpriductone";
 import getproduct from "../functions/axios/getproduct";
-import productModal from "../modals/productModal";
+import productModal from "./productModal";
 
 const home = async () => {
   try {
@@ -417,8 +417,8 @@ const home = async () => {
               element: "div",
               id: `${item.id}`,
               onclick: () => {
-                productModal();
-                console.log(id);
+                // productModal({ id: item.id });
+                Router().navigate(`/product/${item.id}`);
               },
               className: "",
               children: [
