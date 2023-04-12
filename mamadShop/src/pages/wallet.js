@@ -1,7 +1,7 @@
 import { Router } from "../functions/router";
 import { El } from "../library/el/El";
 import getproduct from "./../functions/axios/getproduct";
-import getproductone from "./../functions/axios/getpriductone";
+import getproductone from "../functions/axios/getproductone";
 const wallet = async () => {
   try {
     const { data } = await getproductone(1);

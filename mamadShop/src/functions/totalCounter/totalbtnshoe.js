@@ -7,11 +7,11 @@ export const totalbtnshoe = (data) => {
         .getElementById("totalPriceShoe")
         .firstChild.data.substr(2)
     );
-    console.log(totalPriceShoe);
+    // console.log(totalPriceShoe);
     const newcounterShoe = counterShoe + 1;
     const newtotalPriceShoe = newcounterShoe * data.price;
 
-    console.log(newcounterShoe);
+    // console.log(newcounterShoe);
 
     document.getElementById("counterShoe").innerText =
       newcounterShoe;

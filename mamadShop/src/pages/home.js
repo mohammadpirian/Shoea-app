@@ -1,6 +1,6 @@
 import { Router } from "../functions/router";
 import { El } from "../library/el/El";
-import getproductone from "../functions/axios/getpriductone";
+import getproductone from "../functions/axios/getproductone";
 import getproduct from "../functions/axios/getproduct";
 import productModal from "./productModal";
 

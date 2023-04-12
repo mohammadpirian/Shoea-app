@@ -1,9 +1,11 @@
 import { Router } from "../functions/router";
 import { El } from "../library/el/El";
-import getproductone from "../functions/axios/getpriductone";
+import getproductone from "../functions/axios/getproductone";
 import getproduct from "../functions/axios/getproduct";
 import { totalbtnshoe } from "../functions/totalCounter/totalbtnshoe";
 import { reducebtnshoe } from "../functions/totalCounter/reducebtnshoe";
+import { postproductone } from "../functions/axios/postproductone";
+import { getDatauser } from "../functions/axios/postproductone";
 
 const productModal = async (dataid) => {
   try {
@@ -256,13 +258,25 @@ const productModal = async (dataid) => {
               className:
                 "bg-black text-white h-16 w-60 flex justify-center items-center rounded-full",
               onclick: () => {
-                console.log(
-                  Number(
-                    document
-                      .getElementById("totalPriceShoe")
-                      .firstChild.data.substr(2)
-                  )
-                );
+                getDatauser(1).then((res) => {
+                  // console.log(res);
+                  const clone = res.data;
+                  // console.log(clone);
+                  data.quantity = Number(
+                    document.getElementById("counterShoe").firstChild.data
+                  );
+                  clone.cart.push(data);
+
+                  postproductone(1, clone);
+                });
+                // postproductone(1, data);
+                // console.log(
+                //   Number(
+                //     document
+                //       .getElementById("totalPriceShoe")
+                //       .firstChild.data.substr(2)
+                //   )
+                // );
               },
               children: [`Add to Cart`],
             }),
