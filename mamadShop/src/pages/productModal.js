@@ -269,6 +269,14 @@ const productModal = async (dataid) => {
 
                   postproductone(1, clone);
                 });
+                // postproductone(1, data);
+                // console.log(
+                //   Number(
+                //     document
+                //       .getElementById("totalPriceShoe")
+                //       .firstChild.data.substr(2)
+                //   )
+                // );
               },
               children: [`Add to Cart`],
             }),
@@ -282,3 +290,70 @@ const productModal = async (dataid) => {
 };
 
 export default productModal;
+
+
+// onclick: () => {
+//   getDatauser(1).then((res) => {
+//     // console.log(res);
+
+//     res.data.cart.map((items) => {
+//       const {
+//         id,
+//         title,
+//         price,
+//         size,
+//         color,
+//         brand,
+//         images,
+//         quantity,
+//       } = items;
+
+//       map.set(
+//         {
+//           id,
+//           title,
+//           price,
+//           size,
+//           color,
+//           brand,
+//           images,
+//         },
+//         quantity
+//       );
+//     });
+
+//     const clone = res.data;
+//     // console.log(clone);
+//     let quantity = Number(
+//       document.getElementById("counterShoe").firstChild.data
+//     );
+//     // let includeProduct = clone.cart.find((s) => {
+//     //   return s.id === data.id;
+//     // });
+
+//     map.has(data)
+//       ? map.set(data, map.get(data) + quantity)
+//       : map.set(data, quantity);
+
+//     const newcart = [];
+//     for (const [key, value] of map) {
+//       newcart.push({ ...key, quantity: value });
+//     }
+    
+//     console.log(map);
+//     console.log(newcart);
+//     clone.cart = newcart;
+
+//     postproductone(1, clone);
+//     // console.log(Object.entries(map));
+
+//     // if (includeProduct) {
+//     //   console.log(includeProduct);
+//     //   s.quantity = s.quantity + data.quantity;
+//     // } else {
+//     //   console.log(includeProduct);
+//     //   map.has(data)?;
+//     //   postproductone(1, clone);
+//     // }
+//   });
+// }

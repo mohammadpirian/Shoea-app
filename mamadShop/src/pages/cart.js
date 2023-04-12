@@ -52,12 +52,12 @@ const cart = async () => {
           element: "div",
           id: "products-cart",
           className:
-            "p-[24px] absolute w-full top-[80px]  flex flex-col  justify-center gap-4 overflow-y-scroll no-scrollbar ",
+            "absolute p-8 w-full top-[80px] flex flex-col  justify-center gap-4 overflow-y-scroll no-scrollbar ",
           children: data.cart.map((item) => {
             return El({
               element: "div",
               id: `${item.id}`,
-              className: "flex gap-2",
+              className: "flex",
               children: [
                 El({
                   element: "div",
@@ -138,12 +138,13 @@ const cart = async () => {
                               className: "font-[600] text-[26px]",
                               children: [`−`],
                               onclick: () => {
-                                cartReducebtnshoe();
+                                cartReducebtnshoe(item.quantity);
                               },
                             }),
                             El({
                               element: "p",
-                              id: "cartcounterShoe",
+                              dataset: "",
+                              id: `cartcounterShoe${data.id}`,
                               className: "font-[600] text-[18px]",
                               children: `${item.quantity}`,
                             }),
@@ -152,7 +153,7 @@ const cart = async () => {
                               className: "font-[600] text-[26px]",
                               children: [`+`],
                               onclick: () => {
-                                cartIncreasebtnshoe();
+                                cartIncreasebtnshoe(item.quantity, item.id);
                               },
                             }),
                           ],
