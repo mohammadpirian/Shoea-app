@@ -8,9 +8,11 @@
   ],
   "users": [
     {
+      "id": 1,
       "name": "mamad",
       "email": "mamad@gmail.com",
-      "password": "mamad"
+      "password": "mamad",
+      "wishlist": []
     },
     {
       "name": "1",
@@ -25,7 +27,7 @@
       "price": 245,
       "order": 0,
       "size": [42, 41, 40],
-      "color": ["rose", "emerald", "teal", "gray"],
+      "color": ["rose", "emerald", "yellow", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/public/products/adidas/1.webp"
     },
@@ -45,7 +47,7 @@
       "price": 110,
       "order": 0,
       "size": [44, 43, 40],
-      "color": ["rose", "emerald", "teal", "gray"],
+      "color": ["red", "emerald", "teal", "gray"],
       "brand": "adidas",
       "images": "http://localhost:5173/public/products/adidas/3.webp"
     },

@@ -22,7 +22,7 @@ const changeContents = (target) => {
   root.append(target());
 };
 const changeContents2 = (target, item) => {
-  console.log(item);
+  // console.log(item);
   target(item).then((res) => {
     const root = document.getElementById("rootsEl");
     root.innerHTML = "";

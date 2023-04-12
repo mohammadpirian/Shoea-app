@@ -2,6 +2,8 @@ import { Router } from "../functions/router";
 import { El } from "../library/el/El";
 import getproductone from "../functions/axios/getpriductone";
 import getproduct from "../functions/axios/getproduct";
+import { totalbtnshoe } from "../functions/totalCounter/totalbtnshoe";
+import { reducebtnshoe } from "../functions/totalCounter/reducebtnshoe";
 
 const productModal = async (dataid) => {
   try {
@@ -96,7 +98,7 @@ const productModal = async (dataid) => {
         }),
         El({
           element: "div",
-          className: "w-full px-6 flex flex-col gap-2 py-6",
+          className: "w-full px-6 flex flex-col gap-3 py-10",
           children: [
             El({
               element: "p",
@@ -188,7 +190,7 @@ const productModal = async (dataid) => {
             }),
             El({
               element: "div",
-              className: "flex gap-4",
+              className: "flex gap-4 mt-6 items-center",
               children: [
                 El({
                   element: "p",
@@ -198,22 +200,29 @@ const productModal = async (dataid) => {
                 El({
                   element: "div",
                   className:
-                    "bg-gray-200 flex justify-center p-1 w-20 rounded-full gap-4",
+                    "bg-gray-200 flex justify-center items-center p-1 w-28 rounded-full gap-4",
                   children: [
                     El({
                       element: "button",
-                      className: "",
-                      children: [`-`],
+                      className: "font-[700] text-[26px]",
+                      children: [`−`],
+                      onclick: () => {
+                        reducebtnshoe(data);
+                      },
                     }),
                     El({
                       element: "p",
-                      className: "",
-                      children: [`0`],
+                      id: "counterShoe",
+                      className: "font-[700] text-[18px]",
+                      children: `1`,
                     }),
                     El({
                       element: "button",
-                      className: "",
+                      className: "font-[700] text-[26px]",
                       children: [`+`],
+                      onclick: () => {
+                        totalbtnshoe(data);
+                      },
                     }),
                   ],
                 }),
@@ -223,7 +232,7 @@ const productModal = async (dataid) => {
         }),
         El({
           element: "div",
-          className: "w-full px-6 flex justify-between py-5",
+          className: "w-full px-6 flex justify-between py-8",
           children: [
             El({
               element: "div",
@@ -236,6 +245,7 @@ const productModal = async (dataid) => {
                 }),
                 El({
                   element: "p",
+                  id: "totalPriceShoe",
                   className: "font-[700] text-[28px]",
                   children: [`$ ${data.price}`],
                 }),
@@ -245,6 +255,15 @@ const productModal = async (dataid) => {
               element: "button",
               className:
                 "bg-black text-white h-16 w-60 flex justify-center items-center rounded-full",
+              onclick: () => {
+                console.log(
+                  Number(
+                    document
+                      .getElementById("totalPriceShoe")
+                      .firstChild.data.substr(2)
+                  )
+                );
+              },
               children: [`Add to Cart`],
             }),
           ],
