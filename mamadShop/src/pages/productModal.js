@@ -4,8 +4,8 @@ import getproductone from "../functions/axios/getproductone";
 import getproduct from "../functions/axios/getproduct";
 import { totalbtnshoe } from "../functions/totalCounter/totalbtnshoe";
 import { reducebtnshoe } from "../functions/totalCounter/reducebtnshoe";
-import { postproductone } from "../functions/axios/postproductone";
-import { getDatauser } from "../functions/axios/postproductone";
+import { postproductone } from "../functions/axios/transferdata";
+import { getDatauser } from "../functions/axios/transferdata";
 
 const productModal = async (dataid) => {
   try {
@@ -269,14 +269,6 @@ const productModal = async (dataid) => {
 
                   postproductone(1, clone);
                 });
-                // postproductone(1, data);
-                // console.log(
-                //   Number(
-                //     document
-                //       .getElementById("totalPriceShoe")
-                //       .firstChild.data.substr(2)
-                //   )
-                // );
               },
               children: [`Add to Cart`],
             }),

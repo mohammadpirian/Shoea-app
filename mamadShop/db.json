@@ -34,13 +34,208 @@
           "brand": "adidas",
           "images": "http://localhost:5173/public/products/adidas/4.webp",
           "quantity": 4
+        },
+        {
+          "id": 1,
+          "title": "adidas",
+          "price": 245,
+          "order": 0,
+          "size": [
+            42,
+            41,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "yellow",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/public/products/adidas/1.webp",
+          "quantity": 5
+        },
+        {
+          "id": 24,
+          "title": "converse",
+          "price": 150,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "converse",
+          "images": "http://localhost:5173/public/products/converse/8.jpg",
+          "quantity": 9
+        },
+        {
+          "id": 31,
+          "title": "newbalance",
+          "price": 215,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "newbalance",
+          "images": "http://localhost:5173/public/products/newbalance/7.webp",
+          "quantity": 12
+        },
+        {
+          "id": 24,
+          "title": "converse",
+          "price": 150,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "converse",
+          "images": "http://localhost:5173/public/products/converse/8.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 11,
+          "title": "asics",
+          "price": 238,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "asics",
+          "images": "http://localhost:5173/public/products/asics/3.webp",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "title": "asics",
+          "price": 238,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "asics",
+          "images": "http://localhost:5173/public/products/asics/3.webp",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "title": "asics",
+          "price": 238,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "asics",
+          "images": "http://localhost:5173/public/products/asics/3.webp",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "title": "asics",
+          "price": 238,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "asics",
+          "images": "http://localhost:5173/public/products/asics/3.webp",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "title": "asics",
+          "price": 238,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "asics",
+          "images": "http://localhost:5173/public/products/asics/3.webp",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "title": "asics",
+          "price": 238,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "asics",
+          "images": "http://localhost:5173/public/products/asics/3.webp",
+          "quantity": 1
         }
       ]
-    },
-    {
-      "name": "1",
-      "email": "1",
-      "password": "1"
     }
   ],
   "Products": [

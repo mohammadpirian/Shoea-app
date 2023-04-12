@@ -56,7 +56,7 @@ export const Router = () => {
       changeContents2(home);
     })
     .on("/cart", () => {
-      changeContents(cart);
+      changeContents2(cart);
     })
     .on("/orders", () => {
       changeContents(orders);
