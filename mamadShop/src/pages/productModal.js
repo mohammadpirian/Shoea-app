@@ -6,6 +6,7 @@ import { totalbtnshoe } from "../functions/totalCounter/totalbtnshoe";
 import { reducebtnshoe } from "../functions/totalCounter/reducebtnshoe";
 import { postproductone } from "../functions/axios/transferdata";
 import { getDatauser } from "../functions/axios/transferdata";
+import { find } from "lodash";
 
 const productModal = async (dataid) => {
   try {
@@ -260,13 +261,32 @@ const productModal = async (dataid) => {
               onclick: () => {
                 getDatauser(1).then((res) => {
                   // console.log(res);
+                  // const _ = require("lodash");
                   const clone = res.data;
-                  // console.log(clone);
-                  data.quantity = Number(
+                  // console.log(data.id);
+                  const previousOrder = find(clone.cart, { id: data.id });
+
+                  let quantity = Number(
                     document.getElementById("counterShoe").firstChild.data
                   );
-                  clone.cart.push(data);
 
+                  if (previousOrder) {
+                    // console.log(quantity);
+                    // const neworeder = previousOrder;
+                    // neworeder.quantity = previousOrder.quantity + quantity;
+                    clone.cart.forEach((item) => {
+                      if (item.id === previousOrder.id) {
+                        item.quantity = previousOrder.quantity + quantity;
+                      }
+                    });
+
+                    // data.quantity = newQuantity;
+                    // console.log(data.quantity);
+                    // postproductone(1, (previousOrder.quantity = newQuantity));
+                  } else {
+                    data.quantity = quantity;
+                    clone.cart.push(data);
+                  }
                   postproductone(1, clone);
                 });
                 // postproductone(1, data);
@@ -290,7 +310,6 @@ const productModal = async (dataid) => {
 };
 
 export default productModal;
-
 
 // onclick: () => {
 //   getDatauser(1).then((res) => {
@@ -339,7 +358,7 @@ export default productModal;
 //     for (const [key, value] of map) {
 //       newcart.push({ ...key, quantity: value });
 //     }
-    
+
 //     console.log(map);
 //     console.log(newcart);
 //     clone.cart = newcart;

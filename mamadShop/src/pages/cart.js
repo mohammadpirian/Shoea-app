@@ -52,7 +52,7 @@ const cart = async () => {
           element: "div",
           id: "products-cart",
           className:
-            "absolute p-8 w-full top-[80px] flex flex-col  justify-center gap-4 overflow-y-scroll no-scrollbar ",
+            "absolute p-8 w-full top-[80px] flex flex-col  justify-center gap-4 overflow-y-scroll no-scrollbar pb-48",
           children: data.cart.map((item) => {
             return El({
               element: "div",
@@ -138,7 +138,7 @@ const cart = async () => {
                               className: "font-[600] text-[26px]",
                               children: [`−`],
                               onclick: () => {
-                                cartReducebtnshoe(item.quantity);
+                                cartReducebtnshoe(item.quantity, item.id);
                               },
                             }),
                             El({

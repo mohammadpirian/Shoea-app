@@ -1,3 +1,3 @@
-export const cartReducebtnshoe = () => {
-  console.log("ali");
+export const cartReducebtnshoe = (quantity, id) => {
+  console.log(quantity);
 };

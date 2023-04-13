@@ -33,7 +33,7 @@
           ],
           "brand": "adidas",
           "images": "http://localhost:5173/public/products/adidas/1.webp",
-          "quantity": 6
+          "quantity": 20
         },
         {
           "id": 2,
@@ -53,27 +53,27 @@
           ],
           "brand": "adidas",
           "images": "http://localhost:5173/public/products/adidas/2.webp",
-          "quantity": 1
+          "quantity": 20
         },
         {
-          "id": 1,
+          "id": 8,
           "title": "adidas",
-          "price": 245,
+          "price": 98,
           "order": 0,
           "size": [
+            44,
             42,
-            41,
             40
           ],
           "color": [
             "rose",
             "emerald",
-            "yellow",
+            "teal",
             "gray"
           ],
           "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/1.webp",
-          "quantity": 1
+          "images": "http://localhost:5173/public/products/adidas/8.webp",
+          "quantity": 2
         },
         {
           "id": 4,
@@ -116,9 +116,9 @@
           "quantity": 1
         },
         {
-          "id": 9,
+          "id": 12,
           "title": "asics",
-          "price": 56,
+          "price": 165,
           "order": 0,
           "size": [
             44,
@@ -132,27 +132,7 @@
             "gray"
           ],
           "brand": "asics",
-          "images": "http://localhost:5173/public/products/asics/1.webp",
-          "quantity": 1
-        },
-        {
-          "id": 9,
-          "title": "asics",
-          "price": 56,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "asics",
-          "images": "http://localhost:5173/public/products/asics/1.webp",
+          "images": "http://localhost:5173/public/products/asics/4.webp",
           "quantity": 1
         }
       ]
