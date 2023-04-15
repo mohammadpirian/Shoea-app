@@ -3,10 +3,16 @@ import { El } from "../library/el/El";
 import { cartdata, getDatauser } from "../functions/axios/transferdata";
 import { cartReducebtnshoe } from "../functions/totalCounter/cartReducebtnshoe";
 import { cartIncreasebtnshoe } from "../functions/totalCounter/cartIncreasebtnshoe";
+import { totalCart } from "../functions/totalCart";
+import { datalogin } from "../functions/datalogin";
 
 const cart = async () => {
   try {
     const { data } = await cartdata();
+    console.log(data);
+    setTimeout(() => {
+      totalCart(data);
+    }, 0);
     // console.log(data.cart);
     return El({
       element: "div",
@@ -138,13 +144,13 @@ const cart = async () => {
                               className: "font-[600] text-[26px]",
                               children: [`−`],
                               onclick: () => {
-                                cartReducebtnshoe(item.quantity, item.id);
+                                cartReducebtnshoe(item, item.id);
                               },
                             }),
                             El({
                               element: "p",
                               dataset: "",
-                              id: `cartcounterShoe${data.id}`,
+                              id: `cartcounterShoe${item.id}`,
                               className: "font-[600] text-[18px]",
                               children: `${item.quantity}`,
                             }),
@@ -153,7 +159,7 @@ const cart = async () => {
                               className: "font-[600] text-[26px]",
                               children: [`+`],
                               onclick: () => {
-                                cartIncreasebtnshoe(item.quantity, item.id);
+                                cartIncreasebtnshoe(item, item.id);
                               },
                             }),
                           ],
@@ -168,7 +174,7 @@ const cart = async () => {
         }),
         El({
           element: "nav",
-          id: "",
+
           className:
             "fixed flex w-full h-[110px] bottom-[65px] items-center justify-between px-[24px] rounded-t-3xl bg-white",
           children: [
@@ -183,13 +189,17 @@ const cart = async () => {
                 }),
                 El({
                   element: "p",
+                  id: "totalPriceCartPage",
                   className: "font-[700] text-[24px]",
-                  children: ["$00"],
+                  children: ["$ 00"],
                 }),
               ],
             }),
             El({
               element: "button",
+              onclick: () => {
+                Router().navigate("/checkout");
+              },
               className:
                 "w-[260px] h-[55px] shadow-2xl bg-black text-white rounded-full ",
               children: ["Checkout →"],

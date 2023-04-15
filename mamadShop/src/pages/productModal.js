@@ -287,6 +287,8 @@ const productModal = async (dataid) => {
                     data.quantity = quantity;
                     clone.cart.push(data);
                   }
+                  
+                  
                   postproductone(1, clone);
                 });
                 // postproductone(1, data);

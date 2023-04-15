@@ -33,7 +33,7 @@
           ],
           "brand": "adidas",
           "images": "http://localhost:5173/public/products/adidas/1.webp",
-          "quantity": 20
+          "quantity": 23
         },
         {
           "id": 2,
@@ -53,7 +53,7 @@
           ],
           "brand": "adidas",
           "images": "http://localhost:5173/public/products/adidas/2.webp",
-          "quantity": 20
+          "quantity": 23
         },
         {
           "id": 8,
@@ -93,7 +93,7 @@
           ],
           "brand": "adidas",
           "images": "http://localhost:5173/public/products/adidas/4.webp",
-          "quantity": 4
+          "quantity": 5
         },
         {
           "id": 5,
@@ -134,6 +134,106 @@
           "brand": "asics",
           "images": "http://localhost:5173/public/products/asics/4.webp",
           "quantity": 1
+        },
+        {
+          "id": 3,
+          "title": "adidas",
+          "price": 110,
+          "order": 0,
+          "size": [
+            44,
+            43,
+            40
+          ],
+          "color": [
+            "red",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/public/products/adidas/3.webp",
+          "quantity": 3
+        },
+        {
+          "id": 41,
+          "title": "puma",
+          "price": 335,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "puma",
+          "images": "http://localhost:5173/public/products/puma/1.webp",
+          "quantity": 3
+        },
+        {
+          "id": 53,
+          "title": "reebok",
+          "price": 360,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "reebok",
+          "images": "http://localhost:5173/public/products/reebok/5.webp",
+          "quantity": 1
+        },
+        {
+          "id": 33,
+          "title": "nike",
+          "price": 110,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "nike",
+          "images": "http://localhost:5173/public/products/nike/1.webp",
+          "quantity": 4
+        },
+        {
+          "id": 56,
+          "title": "reebok",
+          "price": 330,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "reebok",
+          "images": "http://localhost:5173/public/products/reebok/8.webp",
+          "quantity": 5
         }
       ]
     }
