@@ -230,6 +230,9 @@ const checkout = async () => {
               element: "button",
               className:
                 " bg-black text-white flex justify-center items-center gap-x-4 rounded-full w-11/12 py-4",
+              onclick: () => {
+                Router().navigate("/paymentMethod");
+              },
               children: [
                 El({
                   element: "span",

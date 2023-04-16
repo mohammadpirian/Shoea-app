@@ -16,6 +16,7 @@ import { datalogin } from "./datalogin";
 import checkout from "../pages/checkout";
 import shippingType from "../pages/checkoutShipping/shippingType";
 import shippingAddress from "../pages/checkoutShipping/shippingAddress";
+import paymentMethod from "../pages/checkoutShipping/paymentMethod";
 export const router = new Navigo("/");
 
 const changeContents = (target) => {
@@ -74,6 +75,9 @@ export const Router = () => {
     })
     .on("/shippingAddress", () => {
       changeContents(shippingAddress);
+    })
+    .on("/paymentMethod", () => {
+      changeContents(paymentMethod);
     })
     .on("/product/:id", (item) => {
       changeContents2(productModal, item.data.id);

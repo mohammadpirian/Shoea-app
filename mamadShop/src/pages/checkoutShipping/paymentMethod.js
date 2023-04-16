@@ -1,10 +1,10 @@
-import apple from "@/components/payment/apple";
-import google from "@/components/payment/google";
-import mastercard from "@/components/payment/mastercard";
-import paypal from "@/components/payment/paypal";
-import wallet from "@/components/payment/wallet";
-import paymentCart from "@/components/payment/paymentCart";
-import El from "@/library/El";
+import apple from "../../components/payment/apple";
+import google from "../../components/payment/google";
+import mastercard from "../../components/payment/mastercard";
+import paypal from "../../components/payment/paypal";
+import wallet from "../../components/payment/wallet";
+import paymentCart from "../../components/payment/paymentCart";
+import { El } from "../../library/el/El";
 
 const paymentMethod = () => {
   return El({
@@ -22,11 +22,16 @@ const paymentMethod = () => {
               El({
                 element: "button",
                 className: "flex",
-                children: El({
-                  element: "ion-icon",
-                  name: "arrow-back",
-                  className: "text-xl",
-                }),
+                children: [
+                  El({
+                    element: "ion-icon",
+                    name: "arrow-back",
+                    className: "text-xl",
+                    onclick: () => {
+                      history.back();
+                    },
+                  }),
+                ],
               }),
               El({
                 element: "h1",
@@ -39,11 +44,13 @@ const paymentMethod = () => {
             element: "button",
             className:
               "border border-solid border-black rounded-lg w-6 h-6 flex justify-center items-center",
-            children: El({
-              element: "ion-icon",
-              name: "add-outline",
-              className: "text-base",
-            }),
+            children: [
+              El({
+                element: "ion-icon",
+                name: "add-outline",
+                className: "text-base",
+              }),
+            ],
           }),
         ],
       }),
@@ -62,18 +69,20 @@ const paymentMethod = () => {
         element: "div",
         className:
           "w-full fixed bottom-0 flex justify-center items-center py-4 bg-white rounded-tl-2xl rounded-tr-2xl shadow-2xl",
-        children: El({
-          element: "button",
-          className:
-            " bg-black text-white flex justify-center items-center gap-x-4 rounded-full w-11/12 py-4",
-          children: [
-            El({
-              element: "span",
-              className: "self-center text-sm font-semibold",
-              children: "Confirm Payment",
-            }),
-          ],
-        }),
+        children: [
+          El({
+            element: "button",
+            className:
+              " bg-black text-white flex justify-center items-center gap-x-4 rounded-full w-11/12 py-4",
+            children: [
+              El({
+                element: "span",
+                className: "self-center text-sm font-semibold",
+                children: "Confirm Payment",
+              }),
+            ],
+          }),
+        ],
       }),
     ],
   });
