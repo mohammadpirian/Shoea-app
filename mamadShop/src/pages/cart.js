@@ -1,15 +1,17 @@
-import { Router } from "../functions/router";
+import { Router, router } from "../functions/router";
 import { El } from "../library/el/El";
 import { cartdata, getDatauser } from "../functions/axios/transferdata";
 import { cartReducebtnshoe } from "../functions/totalCounter/cartReducebtnshoe";
 import { cartIncreasebtnshoe } from "../functions/totalCounter/cartIncreasebtnshoe";
 import { totalCart } from "../functions/totalCart";
 import { datalogin } from "../functions/datalogin";
+import { cloneDeep } from "lodash";
+import instance from "../functions/axios/isntance";
 
 const cart = async () => {
   try {
     const { data } = await cartdata();
-    console.log(data);
+    // console.log(data);
     setTimeout(() => {
       totalCart(data);
     }, 0);
@@ -92,10 +94,31 @@ const cart = async () => {
                         }),
                         El({
                           element: "button",
+                          dataset: { id: `${item.id}` },
                           className: "",
+                          eventListener: [
+                            {
+                              event: "click",
+                              callback: (e) => {
+                                // console.log(e.target.dataset.id);W
+                                instance.get("/users/1").then((response) => {
+                                  const cloneDeep = response.data;
+                                  console.log(cloneDeep);
+                                  cloneDeep.cart = cloneDeep.cart.filter(
+                                    (product) => product.id !== item.id
+                                  );
+                                  // console.log(cloneDeep.cart);
+                                  instance.put(`/users/1`, cloneDeep);
+                                  location.reload();
+                                  
+                                });
+                              },
+                            },
+                          ],
                           children: [
                             El({
                               element: "img",
+                              dataset: { id: `${item.id}` },
                               className: "w-6 h-6",
                               src: "http://localhost:5173/src/images/icon/bin.svg",
                             }),

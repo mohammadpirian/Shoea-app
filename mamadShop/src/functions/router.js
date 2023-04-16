@@ -77,7 +77,7 @@ export const Router = () => {
       changeContents(shippingAddress);
     })
     .on("/paymentMethod", () => {
-      changeContents(paymentMethod);
+      changeContents2(paymentMethod);
     })
     .on("/product/:id", (item) => {
       changeContents2(productModal, item.data.id);

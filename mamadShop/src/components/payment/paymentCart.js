@@ -1,7 +1,8 @@
 import { El } from "../../library/el/El";
 import radioButton from "../address/radioButton";
 
-const paymentCart = (paymentLogo, paymentName) => {
+const paymentCart = (paymentLogo, paymentName, totalPricePayment) => {
+  // console.log(data);
   return El({
     element: "div",
     className:
@@ -26,7 +27,7 @@ const paymentCart = (paymentLogo, paymentName) => {
           El({
             element: "span",
             className: "font-medium text-sm",
-            children: "$9,379",
+            children: `$${totalPricePayment}`,
           }),
           radioButton(),
         ],
