@@ -14,6 +14,8 @@ import profile from "../pages/profile";
 import productModal from "../pages/productModal";
 import { datalogin } from "./datalogin";
 import checkout from "../pages/checkout";
+import shippingType from "../pages/checkoutShipping/shippingType";
+import shippingAddress from "../pages/checkoutShipping/shippingAddress";
 export const router = new Navigo("/");
 
 const changeContents = (target) => {
@@ -66,6 +68,12 @@ export const Router = () => {
     })
     .on("/profile", () => {
       changeContents(profile);
+    })
+    .on("/shippingType", () => {
+      changeContents(shippingType);
+    })
+    .on("/shippingAddress", () => {
+      changeContents(shippingAddress);
     })
     .on("/product/:id", (item) => {
       changeContents2(productModal, item.data.id);

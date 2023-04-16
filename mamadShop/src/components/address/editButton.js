@@ -1,14 +1,20 @@
+import { Router } from "../../functions/router";
 import { El } from "../../library/el/El";
 
 const editButton = () => {
   return El({
     element: "button",
     className: "flex",
-    children: [El({
-      element: "ion-icon",
-      name: "create",
-      className: "text-3xl",
-    })],
+    onclick: () => {
+      Router().navigate("/shippingAddress");
+    },
+    children: [
+      El({
+        element: "img",
+        src: "./src/images/icon/edit.svg",
+        className: "text-3xl w-6 h-6",
+      }),
+    ],
   });
 };
 

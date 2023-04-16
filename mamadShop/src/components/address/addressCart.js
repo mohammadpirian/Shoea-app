@@ -27,10 +27,10 @@ const addressCart = (
                   "absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-black rounded-full w-10 h-10 text-center",
                 children: [
                   El({
-                    element: "ion-icon",
-                    name: addressLogo,
+                    element: "img",
+                    src: "./src/images/icon/location.svg",
                     className:
-                      "absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white z-10 text-xl",
+                      "absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white z-10 text-xl w-5 h-5",
                   }),
                 ],
               }),
@@ -63,11 +63,13 @@ const addressCart = (
       }),
       El({
         element: "div",
-        children: [El({
-          element: "span",
-          children: price,
-          className: "font-bold text-lg",
-        })],
+        children: [
+          El({
+            element: "span",
+            children: price,
+            className: "font-bold text-lg",
+          }),
+        ],
       }),
       variableItem,
     ],

@@ -36,18 +36,21 @@ const checkout = async () => {
                 El({
                   element: "button",
                   className: "flex",
+                  onclick: () => {
+                    history.back();
+                  },
                   children: [
                     El({
-                      element: "ion-icon",
-                      name: "arrow-back-outline",
+                      element: "img",
                       className: "text-2xl",
+                      src: "./src/images/icon/back.svg",
                     }),
                   ],
                 }),
                 El({
                   element: "h1",
-                  children: "Checkout",
                   className: "text-2xl font-bold",
+                  children: "Checkout",
                 }),
               ],
             }),
@@ -92,6 +95,9 @@ const checkout = async () => {
         El({
           element: "button",
           className: "w-full",
+          onclick: () => {
+            Router().navigate("/shippingType");
+          },
           children: [
             El({
               element: "div",
@@ -166,14 +172,10 @@ const checkout = async () => {
                 }),
                 El({
                   element: "span",
-                  children: data.cart.map((item) => {
-                    let totalPriceItems = item.totalPr;
-                    // totalPriceItems.push();
-                    console.log(totalPriceItems);
-                    for (let i = 0; i < item.totalPr.length; i++) {
-                      sum += item.totalPr[i];
-                    }
-                  }),
+                  children: [
+                    "$",
+                    data.cart.reduce((acc, item) => item.totalPr + acc, 0),
+                  ],
                   className: "text-gray-700 text-lg",
                 }),
               ],
@@ -209,7 +211,10 @@ const checkout = async () => {
                 }),
                 El({
                   element: "span",
-                  children: "-",
+                  children: [
+                    "$",
+                    data.cart.reduce((acc, item) => item.totalPr + acc, 0),
+                  ],
                   className: "text-gray-700 font-bold text-lg",
                 }),
               ],
