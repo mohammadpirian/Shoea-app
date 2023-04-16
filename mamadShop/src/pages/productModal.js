@@ -6,8 +6,9 @@ import { totalbtnshoe } from "../functions/totalCounter/totalbtnshoe";
 import { reducebtnshoe } from "../functions/totalCounter/reducebtnshoe";
 import { postproductone } from "../functions/axios/transferdata";
 import { getDatauser } from "../functions/axios/transferdata";
-import { find } from "lodash";
+import { find, forEach } from "lodash";
 
+let selectedcolor = "";
 const productModal = async (dataid) => {
   try {
     const { data } = await getproductone(dataid);
@@ -142,6 +143,27 @@ const productModal = async (dataid) => {
                           return El({
                             element: "button",
                             className: `border border-black w-8 h-8 rounded-full`,
+                            onclick: (e) => {
+                              let index = e.target;
+                              // console.log(index);
+                              let buttons = [...e.target.parentNode.children];
+                              // console.log(buttons);
+                              buttons.map((button) => {
+                                // console.log(button);
+                                if (button === index) {
+                                  // console.log(index);
+                                  index.classList.add("bg-black");
+                                  index.classList.add("text-white");
+                                  index.classList.add("selected-size");
+                                  // console.log(index);
+                                } else if (button !== index) {
+                                  // console.log(button);
+                                  button.classList.remove("bg-black");
+                                  button.classList.remove("text-white");
+                                  button.classList.remove("selected-size");
+                                }
+                              });
+                            },
                             children: [`${item}`],
                           });
                         }),
@@ -182,6 +204,29 @@ const productModal = async (dataid) => {
                           return El({
                             element: "button",
                             className: `w-8 h-8 rounded-full bg-${item}-700`,
+                            onclick: (e) => {
+                              selectedcolor = item;
+                              console.log(selectedcolor);
+                              let index = e.target;
+                              // console.log(index);
+                              let buttons = [...e.target.parentNode.children];
+                              // console.log(buttons);
+                              buttons.map((button) => {
+                                // console.log(button);
+                                if (button === index) {
+                                  // console.log(index);
+                                  index.classList.add("border-[3px]");
+                                  index.classList.add("border-black");
+                                  index.classList.add("selected-color");
+                                  // console.log(index);
+                                } else if (button !== index) {
+                                  // console.log(button);
+                                  button.classList.remove("border-[3px]");
+                                  button.classList.remove("border-black");
+                                  button.classList.remove("selected-color");
+                                }
+                              });
+                            },
                             children: [``],
                           });
                         }),
@@ -270,6 +315,21 @@ const productModal = async (dataid) => {
                     document.getElementById("counterShoe").firstChild.data
                   );
 
+                  let totalPr = Number(
+                    document
+                      .getElementById("totalPriceShoe")
+                      .firstChild.data.substr(2)
+                  );
+
+                  
+
+                  let sizeselect = Number(
+                    document.querySelector(".selected-size").firstChild.data
+                  );
+
+                  // let colorselected = document.querySelector(".selected-color");
+                  // console.log(...colorselected.classList);
+
                   if (previousOrder) {
                     // console.log(quantity);
                     // const neworeder = previousOrder;
@@ -277,18 +337,24 @@ const productModal = async (dataid) => {
                     clone.cart.forEach((item) => {
                       if (item.id === previousOrder.id) {
                         item.quantity = previousOrder.quantity + quantity;
+                        item.totalPr = previousOrder.totalPr + totalPr;
+                        data.sizeselect = sizeselect;
+                        data.colorselect = selectedcolor;
                       }
                     });
 
+                    // console.log(index);
                     // data.quantity = newQuantity;
                     // console.log(data.quantity);
                     // postproductone(1, (previousOrder.quantity = newQuantity));
                   } else {
+                    data.sizeselect = sizeselect;
+                    data.colorselect = selectedcolor;
                     data.quantity = quantity;
+                    data.totalPr = totalPr;
                     clone.cart.push(data);
                   }
-                  
-                  
+
                   postproductone(1, clone);
                 });
                 // postproductone(1, data);

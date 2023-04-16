@@ -109,19 +109,19 @@ const cart = async () => {
                       children: [
                         El({
                           element: "div",
-                          className: "w-4 h-4 rounded-full bg-red-700 m-2",
+                          className: `w-4 h-4 rounded-full bg-${item.colorselect}-700 m-2`,
                           children: [],
                         }),
                         El({
                           element: "p",
                           className:
                             "px-2 border-r border-gray-500 text-gray-700",
-                          children: [`red`],
+                          children: [`${item.colorselect}`],
                         }),
                         El({
                           element: "p",
                           className: "p-2  text-gray-700",
-                          children: [`Size = 42`],
+                          children: [`Size = ${item.sizeselect}`],
                         }),
                       ],
                     }),
