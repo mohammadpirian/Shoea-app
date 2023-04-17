@@ -84,99 +84,24 @@ const orderComp = async () => {
         }),
         El({
           element: "div",
-          id: "products-order",
-          className:
-            "absolute p-4 w-full top-[80px] flex flex-col  justify-center gap-4 overflow-y-scroll no-scrollbar pb-20 pt-16",
-          children: data.order.map((item) => {
-            return El({
-              element: "div",
-              id: `${item.id}`,
-              className: "flex w-full shadow-2xl rounded-xl",
-              children: [
-                El({
-                  element: "div",
-                  className:
-                    "w-[182px] h-[182px] flex justify-center items-center  rounded-2xl",
-                  children: [
-                    El({
-                      element: "img",
-                      className:
-                        "w-[75%] h-[75%] rounded-2xl w-full h-full shadow-lg",
-                      src: `${item.images}`,
-                    }),
-                  ],
-                }),
-                El({
-                  element: "div",
-                  className: "flex flex-col p-2 justify-center gap-2 w-[214px]",
-                  children: [
-                    El({
-                      element: "div",
-                      className: "flex justify-between",
-                      children: [
-                        El({
-                          element: "p",
-                          className: "font-[600] text-[24px]",
-                          children: [`${item.title}`],
-                        }),
-                      ],
-                    }),
-                    El({
-                      element: "div",
-                      className: "flex items-center ",
-                      children: [
-                        El({
-                          element: "div",
-                          className: `w-4 h-4 rounded-full bg-${item.colorselect}-700 `,
-                          children: [],
-                        }),
-                        El({
-                          element: "p",
-                          className: "pl-1 text-gray-700 text-[14px]",
-                          children: [`${item.colorselect}  |`],
-                        }),
-                        El({
-                          element: "p",
-                          className: "pl-1  text-gray-700 text-[14px]",
-                          children: [`Size = ${item.sizeselect} |`],
-                        }),
-                        El({
-                          element: "p",
-                          className: "pl-1  text-gray-700 text-[14px]",
-                          children: [`Qty = ${item.quantity}`],
-                        }),
-                      ],
-                    }),
-                    El({
-                      element: "div",
-                      className: "flex justify-between items-center",
-                      children: [
-                        El({
-                          element: "p",
-                          className: "font-[600] text-[20px]",
-                          children: [`$ ${item.price}`],
-                        }),
-                        El({
-                          element: "div",
-                          className:
-                            "bg-black flex justify-center items-center h-8 w-28 rounded-full gap-4",
-                          children: [
-                            El({
-                              element: "p",
-                              dataset: "",
-                              id: `cartcounterShoe${item.id}`,
-                              className: "font-[600] text-[14px] text-gray-100",
-                              children: `Buy Again`,
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              ],
-            });
-          }),
+          className: "w-full flex flex-col h-full justify-center items-center",
+          children: [
+            El({
+              element: "img",
+              className: "",
+              src: "./src/images/icon/dont.png",
+            }),
+            El({
+              element: "p",
+              className: "font-[600] text-[24px]",
+              children: ["You don't have an order yet"],
+            }),
+            El({
+              element: "p",
+              className: "font-[400] text-[16px]",
+              children: ["You don't have a complete orders at this time"],
+            }),
+          ],
         }),
         El({
           element: "nav",
