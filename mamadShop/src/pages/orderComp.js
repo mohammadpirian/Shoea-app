@@ -1,31 +1,20 @@
-import { Router, router } from "../functions/router";
+import { cartdata } from "../functions/axios/transferdata";
+import { Router } from "../functions/router";
 import { El } from "../library/el/El";
-import { cartdata, getDatauser } from "../functions/axios/transferdata";
-import { cartReducebtnshoe } from "../functions/totalCounter/cartReducebtnshoe";
-import { cartIncreasebtnshoe } from "../functions/totalCounter/cartIncreasebtnshoe";
-import { totalCart } from "../functions/totalCart";
-import { datalogin } from "../functions/datalogin";
-import { cloneDeep } from "lodash";
-import instance from "../functions/axios/isntance";
 
-const cart = async () => {
+const orderComp = async () => {
+  const { data } = await cartdata();
   try {
-    const { data } = await cartdata();
-    // console.log(data);
-    setTimeout(() => {
-      totalCart(data);
-    }, 0);
-    // console.log(data.cart);
     return El({
       element: "div",
-      id: "cart",
+      id: "orderComp",
       className: "w-screen h-screen flex flex-col overflow-y-hidden",
       children: [
         El({
           element: "nav",
           id: "",
           className:
-            "fixed flex w-full h-[80px] z-20 top-0 justify-between items-center px-[24px] bg-white",
+            "fixed flex w-full h-[80px] top-0 justify-between items-center px-[24px] bg-white z-10",
           children: [
             El({
               element: "div",
@@ -39,18 +28,35 @@ const cart = async () => {
                 El({
                   element: "p",
                   className: "font-[600] text-[30px] ml-4 font-mono",
-                  children: ["My Cart"],
+                  children: ["My Orders"],
                 }),
               ],
             }),
             El({
-              element: "button",
-              className: "",
+              element: "div",
+              className: "flex gap-[16px]",
               children: [
                 El({
-                  element: "img",
-                  className: "w-[24px] h-[24px]",
-                  src: "./src/images/icon/search.svg",
+                  element: "button",
+                  className: "",
+                  children: [
+                    El({
+                      element: "img",
+                      className: "w-[24px] h-[24px]",
+                      src: "./src/images/icon/search.svg",
+                    }),
+                  ],
+                }),
+                El({
+                  element: "button",
+                  className: "",
+                  children: [
+                    El({
+                      element: "img",
+                      className: "w-[24px] h-[24px]",
+                      src: "./src/images/icon/more.svg",
+                    }),
+                  ],
                 }),
               ],
             }),
@@ -58,10 +64,30 @@ const cart = async () => {
         }),
         El({
           element: "div",
-          id: "products-cart",
           className:
-            "absolute p-4 w-full top-[80px] flex flex-col  justify-center gap-4 overflow-y-scroll no-scrollbar pb-48",
-          children: data.cart.map((item) => {
+            "fixed flex w-full h-[60px] top-[60px] items-center px-[24px] bg-white z-10 shadow-lg",
+          children: [
+            El({
+              element: "button",
+              className: "w-1/2 h-full border-gray-300 border-b-[3px]",
+              children: "Active",
+              onclick: () => {
+                Router().navigate("/orders");
+              },
+            }),
+            El({
+              element: "button",
+              className: "w-1/2 h-full border-b-[3px] border-black",
+              children: "Completed",
+            }),
+          ],
+        }),
+        El({
+          element: "div",
+          id: "products-order",
+          className:
+            "absolute p-4 w-full top-[80px] flex flex-col  justify-center gap-4 overflow-y-scroll no-scrollbar pb-20 pt-16",
+          children: data.order.map((item) => {
             return El({
               element: "div",
               id: `${item.id}`,
@@ -82,7 +108,7 @@ const cart = async () => {
                 }),
                 El({
                   element: "div",
-                  className: "flex flex-col p-2 justify-center gap-2",
+                  className: "flex flex-col p-2 justify-center gap-2 w-[214px]",
                   children: [
                     El({
                       element: "div",
@@ -93,37 +119,6 @@ const cart = async () => {
                           className: "font-[600] text-[24px]",
                           children: [`${item.title}`],
                         }),
-                        El({
-                          element: "button",
-                          dataset: { id: `${item.id}` },
-                          className: "",
-                          eventListener: [
-                            {
-                              event: "click",
-                              callback: (e) => {
-                                // console.log(e.target.dataset.id);W
-                                instance.get("/users/1").then((response) => {
-                                  const cloneDeep = response.data;
-                                  console.log(cloneDeep);
-                                  cloneDeep.cart = cloneDeep.cart.filter(
-                                    (product) => product.id !== item.id
-                                  );
-                                  // console.log(cloneDeep.cart);
-                                  instance.put(`/users/1`, cloneDeep);
-                                  location.reload();
-                                });
-                              },
-                            },
-                          ],
-                          children: [
-                            El({
-                              element: "img",
-                              dataset: { id: `${item.id}` },
-                              className: "w-6 h-6",
-                              src: "http://localhost:5173/src/images/icon/bin.svg",
-                            }),
-                          ],
-                        }),
                       ],
                     }),
                     El({
@@ -132,19 +127,23 @@ const cart = async () => {
                       children: [
                         El({
                           element: "div",
-                          className: `w-4 h-4 rounded-full bg-${item.colorselect}-700 m-2`,
+                          className: `w-4 h-4 rounded-full bg-${item.colorselect}-700 `,
                           children: [],
                         }),
                         El({
                           element: "p",
-                          className:
-                            "px-2 border-r border-gray-500 text-gray-700",
-                          children: [`${item.colorselect}`],
+                          className: "pl-1 text-gray-700 text-[14px]",
+                          children: [`${item.colorselect}  |`],
                         }),
                         El({
                           element: "p",
-                          className: "p-2  text-gray-700",
-                          children: [`Size = ${item.sizeselect}`],
+                          className: "pl-1  text-gray-700 text-[14px]",
+                          children: [`Size = ${item.sizeselect} |`],
+                        }),
+                        El({
+                          element: "p",
+                          className: "pl-1  text-gray-700 text-[14px]",
+                          children: [`Qty = ${item.quantity}`],
                         }),
                       ],
                     }),
@@ -154,36 +153,20 @@ const cart = async () => {
                       children: [
                         El({
                           element: "p",
-                          className: "font-[600] text-[18px]",
+                          className: "font-[600] text-[20px]",
                           children: [`$ ${item.price}`],
                         }),
                         El({
                           element: "div",
                           className:
-                            "bg-gray-200 flex justify-center items-center h-10 w-24 rounded-full gap-4",
+                            "bg-black flex justify-center items-center h-8 w-28 rounded-full gap-4",
                           children: [
-                            El({
-                              element: "button",
-                              className: "font-[600] text-[26px]",
-                              children: [`−`],
-                              onclick: () => {
-                                cartReducebtnshoe(item, item.id);
-                              },
-                            }),
                             El({
                               element: "p",
                               dataset: "",
                               id: `cartcounterShoe${item.id}`,
-                              className: "font-[600] text-[18px]",
-                              children: `${item.quantity}`,
-                            }),
-                            El({
-                              element: "button",
-                              className: "font-[600] text-[26px]",
-                              children: [`+`],
-                              onclick: () => {
-                                cartIncreasebtnshoe(item, item.id);
-                              },
+                              className: "font-[600] text-[14px] text-gray-100",
+                              children: `Buy Again`,
                             }),
                           ],
                         }),
@@ -194,40 +177,6 @@ const cart = async () => {
               ],
             });
           }),
-        }),
-        El({
-          element: "nav",
-
-          className:
-            "fixed flex w-full h-[110px] bottom-[65px] items-center justify-between px-[24px] rounded-t-3xl bg-white",
-          children: [
-            El({
-              element: "div",
-              className: "",
-              children: [
-                El({
-                  element: "p",
-                  className: "w-[90px] ",
-                  children: ["Total Price"],
-                }),
-                El({
-                  element: "p",
-                  id: "totalPriceCartPage",
-                  className: "font-[700] text-[24px]",
-                  children: ["$ 00"],
-                }),
-              ],
-            }),
-            El({
-              element: "button",
-              onclick: () => {
-                Router().navigate("/checkout");
-              },
-              className:
-                "w-[260px] h-[55px] shadow-2xl bg-black text-white rounded-full ",
-              children: ["Checkout →"],
-            }),
-          ],
         }),
         El({
           element: "nav",
@@ -259,11 +208,14 @@ const cart = async () => {
               element: "button",
               id: "cart-btn",
               className: " flex flex-col justify-center items-center",
+              onclick: () => {
+                Router().navigate("/cart");
+              },
               children: [
                 El({
                   element: "img",
                   className: "w-[24px] h-[24px]",
-                  src: "./src/images/icon/cart-select.png",
+                  src: "./src/images/icon/cart.svg",
                 }),
                 El({
                   element: "p",
@@ -276,14 +228,11 @@ const cart = async () => {
               element: "button",
               id: "orders-btn",
               className: " flex flex-col justify-center items-center",
-              onclick: () => {
-                Router().navigate("/orders");
-              },
               children: [
                 El({
                   element: "img",
                   className: "w-[24px] h-[24px]",
-                  src: "./src/images/icon/orders.svg",
+                  src: "./src/images/icon/orders-select.png",
                 }),
                 El({
                   element: "p",
@@ -336,9 +285,7 @@ const cart = async () => {
         }),
       ],
     });
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
-export default cart;
+export default orderComp;

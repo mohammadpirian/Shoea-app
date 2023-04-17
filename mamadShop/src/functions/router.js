@@ -17,7 +17,9 @@ import checkout from "../pages/checkout";
 import shippingType from "../pages/checkoutShipping/shippingType";
 import shippingAddress from "../pages/checkoutShipping/shippingAddress";
 import paymentMethod from "../pages/checkoutShipping/paymentMethod";
+import orderComp from "../pages/orderComp";
 export const router = new Navigo("/");
+
 
 const changeContents = (target) => {
   const root = document.getElementById("rootsEl");
@@ -62,7 +64,10 @@ export const Router = () => {
       changeContents2(cart);
     })
     .on("/orders", () => {
-      changeContents(orders);
+      changeContents2(orders);
+    })
+    .on("/orderComp", () => {
+      changeContents2(orderComp);
     })
     .on("/wallet", () => {
       changeContents2(wallet);
