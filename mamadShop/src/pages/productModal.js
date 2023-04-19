@@ -61,6 +61,14 @@ const productModal = async (dataid) => {
                 El({
                   element: "button",
                   className: "",
+                  onclick: () => {
+                    getDatauser(1).then((res) => {
+                      console.log(data);
+                      const clone = res.data;
+                      clone.wishlist.push(data);
+                      postproductone(1, clone);
+                    });
+                  },
                   children: [
                     El({
                       element: "img",
@@ -320,8 +328,6 @@ const productModal = async (dataid) => {
                       .getElementById("totalPriceShoe")
                       .firstChild.data.substr(2)
                   );
-
-                  
 
                   let sizeselect = Number(
                     document.querySelector(".selected-size").firstChild.data

@@ -72,6 +72,9 @@ const home = async () => {
                 El({
                   element: "button",
                   id: "like-btn",
+                  onclick: () => {
+                    Router().navigate("/wishlist");
+                  },
                   className: " flex flex-col justify-center items-center",
                   children: [
                     El({

@@ -25,6 +25,7 @@ import puma from "./../pages/filter/puma";
 import newbalance from "../pages/filter/newbalance";
 import reebok from "./../pages/filter/reebok";
 import asics from "./../pages/filter/asics";
+import wishlist from "../pages/wishlist";
 
 export const router = new Navigo("/");
 
@@ -72,6 +73,9 @@ export const Router = () => {
     })
     .on("/orders", () => {
       changeContents2(orders);
+    })
+    .on("/wishlist", () => {
+      changeContents2(wishlist);
     })
     .on("/orderComp", () => {
       changeContents2(orderComp);

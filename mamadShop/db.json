@@ -12,7 +12,122 @@
       "name": "mamad",
       "email": "mamad@gmail.com",
       "password": "mamad",
-      "wishlist": [],
+      "wishlist": [
+        {
+          "id": 1,
+          "title": "adidas",
+          "price": 245,
+          "order": 0,
+          "size": [
+            42,
+            41,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "yellow",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/public/products/adidas/1.webp"
+        },
+        {
+          "id": 2,
+          "title": "adidas",
+          "price": 145,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/public/products/adidas/2.webp"
+        },
+        {
+          "id": 4,
+          "title": "adidas",
+          "price": 223,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            39
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/public/products/adidas/4.webp"
+        },
+        {
+          "id": 6,
+          "title": "adidas",
+          "price": 45,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/public/products/adidas/6.webp"
+        },
+        {
+          "id": 34,
+          "title": "nike",
+          "price": 99,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "nike",
+          "images": "http://localhost:5173/public/products/nike/2.webp"
+        },
+        {
+          "id": 56,
+          "title": "reebok",
+          "price": 330,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "reebok",
+          "images": "http://localhost:5173/public/products/reebok/8.webp"
+        }
+      ],
       "order": [
         {
           "id": 8,
