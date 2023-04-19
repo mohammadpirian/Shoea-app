@@ -122,6 +122,9 @@ const home = async () => {
                       children: [
                         El({
                           element: "button",
+                          onclick: () => {
+                            Router().navigate("/nike");
+                          },
                           className:
                             "w-[60px] h-[60px] rounded-full bg-gray-200 flex justify-center items-center",
                           children: [
@@ -146,6 +149,9 @@ const home = async () => {
                       children: [
                         El({
                           element: "button",
+                          onclick: () => {
+                            Router().navigate("/adidas");
+                          },
                           className:
                             "w-[60px] h-[60px] rounded-full bg-gray-200 flex justify-center items-center",
                           children: [
@@ -170,6 +176,9 @@ const home = async () => {
                       children: [
                         El({
                           element: "button",
+                          onclick: () => {
+                            Router().navigate("/puma");
+                          },
                           className:
                             "w-[60px] h-[60px] rounded-full bg-gray-200 flex justify-center items-center",
                           children: [
@@ -194,6 +203,9 @@ const home = async () => {
                       children: [
                         El({
                           element: "button",
+                          onclick: () => {
+                            Router().navigate("/asics");
+                          },
                           className:
                             "w-[60px] h-[60px] rounded-full bg-gray-200 flex justify-center items-center",
                           children: [
@@ -230,6 +242,9 @@ const home = async () => {
                       children: [
                         El({
                           element: "button",
+                          onclick: () => {
+                            Router().navigate("/reebok");
+                          },
                           className:
                             "w-[60px] h-[60px] rounded-full bg-gray-200 flex justify-center items-center",
                           children: [
@@ -254,6 +269,9 @@ const home = async () => {
                       children: [
                         El({
                           element: "button",
+                          onclick: () => {
+                            Router().navigate("/newbalance");
+                          },
                           className:
                             "w-[60px] h-[60px] rounded-full bg-gray-200 flex justify-center items-center",
                           children: [
@@ -278,6 +296,9 @@ const home = async () => {
                       children: [
                         El({
                           element: "button",
+                          onclick: () => {
+                            Router().navigate("/converse");
+                          },
                           className:
                             "w-[60px] h-[60px] rounded-full bg-gray-200 flex justify-center items-center",
                           children: [

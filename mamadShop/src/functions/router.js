@@ -18,8 +18,15 @@ import shippingType from "../pages/checkoutShipping/shippingType";
 import shippingAddress from "../pages/checkoutShipping/shippingAddress";
 import paymentMethod from "../pages/checkoutShipping/paymentMethod";
 import orderComp from "../pages/orderComp";
-export const router = new Navigo("/");
+import nike from "../pages/filter/nike";
+import adidas from "../pages/filter/adidas";
+import converse from "../pages/filter/convrese";
+import puma from "./../pages/filter/puma";
+import newbalance from "../pages/filter/newbalance";
+import reebok from "./../pages/filter/reebok";
+import asics from "./../pages/filter/asics";
 
+export const router = new Navigo("/");
 
 const changeContents = (target) => {
   const root = document.getElementById("rootsEl");
@@ -71,6 +78,27 @@ export const Router = () => {
     })
     .on("/wallet", () => {
       changeContents2(wallet);
+    })
+    .on("/nike", () => {
+      changeContents2(nike);
+    })
+    .on("/converse", () => {
+      changeContents2(converse);
+    })
+    .on("/puma", () => {
+      changeContents2(puma);
+    })
+    .on("/newbalance", () => {
+      changeContents2(newbalance);
+    })
+    .on("/reebok", () => {
+      changeContents2(reebok);
+    })
+    .on("/asics", () => {
+      changeContents2(asics);
+    })
+    .on("/adidas", () => {
+      changeContents2(adidas);
     })
     .on("/profile", () => {
       changeContents(profile);

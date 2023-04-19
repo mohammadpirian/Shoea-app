@@ -174,9 +174,7 @@
           "colorselect": "rose",
           "quantity": 1,
           "totalPr": 150
-        }
-      ],
-      "cart": [
+        },
         {
           "id": 4,
           "title": "adidas",
@@ -268,6 +266,77 @@
           "colorselect": "gray",
           "quantity": 1,
           "totalPr": 125
+        },
+        {
+          "id": 4,
+          "title": "adidas",
+          "price": 223,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            39
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/public/products/adidas/4.webp",
+          "sizeselect": 39,
+          "colorselect": "rose",
+          "quantity": 1,
+          "totalPr": 223
+        },
+        {
+          "id": 18,
+          "title": "converse",
+          "price": 160,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "converse",
+          "images": "http://localhost:5173/public/products/converse/2.jpg",
+          "sizeselect": 40,
+          "colorselect": "rose",
+          "quantity": 2,
+          "totalPr": 320
+        }
+      ],
+      "cart": [
+        {
+          "id": 45,
+          "title": "puma",
+          "price": 399,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "puma",
+          "images": "http://localhost:5173/public/products/puma/5.webp",
+          "sizeselect": 40,
+          "colorselect": "emerald",
+          "quantity": 1,
+          "totalPr": 399
         }
       ]
     }

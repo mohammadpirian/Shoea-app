@@ -96,12 +96,12 @@ const orders = async () => {
                 El({
                   element: "div",
                   className:
-                    "w-[182px] h-[182px] flex justify-center items-center  rounded-2xl",
+                    "p-4 w-[182px] h-[182px] flex justify-center items-center  rounded-2xl",
                   children: [
                     El({
                       element: "img",
                       className:
-                        "w-[75%] h-[75%] rounded-2xl w-full h-full shadow-lg",
+                        "w-full h-full rounded-2xl w-full h-full shadow-lg",
                       src: `${item.images}`,
                     }),
                   ],
