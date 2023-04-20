@@ -14,44 +14,6 @@
       "password": "mamad",
       "wishlist": [
         {
-          "id": 1,
-          "title": "adidas",
-          "price": 245,
-          "order": 0,
-          "size": [
-            42,
-            41,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "yellow",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/1.webp"
-        },
-        {
-          "id": 2,
-          "title": "adidas",
-          "price": 145,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/2.webp"
-        },
-        {
           "id": 4,
           "title": "adidas",
           "price": 223,
@@ -71,9 +33,66 @@
           "images": "http://localhost:5173/public/products/adidas/4.webp"
         },
         {
-          "id": 6,
+          "id": 41,
+          "title": "puma",
+          "price": 335,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "puma",
+          "images": "http://localhost:5173/public/products/puma/1.webp"
+        },
+        {
+          "id": 44,
+          "title": "puma",
+          "price": 310,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "puma",
+          "images": "http://localhost:5173/public/products/puma/4.webp"
+        },
+        {
+          "id": 43,
+          "title": "puma",
+          "price": 370,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "puma",
+          "images": "http://localhost:5173/public/products/puma/3.webp"
+        },
+        {
+          "id": 8,
           "title": "adidas",
-          "price": 45,
+          "price": 98,
           "order": 0,
           "size": [
             44,
@@ -87,349 +106,10 @@
             "gray"
           ],
           "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/6.webp"
-        },
-        {
-          "id": 34,
-          "title": "nike",
-          "price": 99,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "nike",
-          "images": "http://localhost:5173/public/products/nike/2.webp"
-        },
-        {
-          "id": 56,
-          "title": "reebok",
-          "price": 330,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "reebok",
-          "images": "http://localhost:5173/public/products/reebok/8.webp"
+          "images": "http://localhost:5173/public/products/adidas/8.webp"
         }
       ],
       "order": [
-        {
-          "id": 8,
-          "title": "adidas",
-          "price": 98,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/8.webp",
-          "sizeselect": 40,
-          "colorselect": "teal",
-          "quantity": 1,
-          "totalPr": 98
-        },
-        {
-          "id": 4,
-          "title": "adidas",
-          "price": 223,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            39
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/4.webp",
-          "sizeselect": 42,
-          "colorselect": "gray",
-          "quantity": 3,
-          "totalPr": 669
-        },
-        {
-          "id": 2,
-          "title": "adidas",
-          "price": 145,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/2.webp",
-          "sizeselect": 40,
-          "colorselect": "emerald",
-          "quantity": 1,
-          "totalPr": 145
-        },
-        {
-          "id": 4,
-          "title": "adidas",
-          "price": 223,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            39
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/4.webp",
-          "sizeselect": 39,
-          "colorselect": "gray",
-          "quantity": 3,
-          "totalPr": 669
-        },
-        {
-          "id": 8,
-          "title": "adidas",
-          "price": 98,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/8.webp",
-          "sizeselect": 40,
-          "colorselect": "teal",
-          "quantity": 1,
-          "totalPr": 98
-        },
-        {
-          "id": 6,
-          "title": "adidas",
-          "price": 45,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/6.webp",
-          "sizeselect": 44,
-          "colorselect": "emerald",
-          "quantity": 2,
-          "totalPr": 90
-        },
-        {
-          "id": 24,
-          "title": "converse",
-          "price": 150,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "converse",
-          "images": "http://localhost:5173/public/products/converse/8.jpg",
-          "sizeselect": 40,
-          "colorselect": "rose",
-          "quantity": 1,
-          "totalPr": 150
-        },
-        {
-          "id": 4,
-          "title": "adidas",
-          "price": 223,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            39
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/4.webp",
-          "sizeselect": 39,
-          "colorselect": "rose",
-          "quantity": 1,
-          "totalPr": 223
-        },
-        {
-          "id": 1,
-          "title": "adidas",
-          "price": 245,
-          "order": 0,
-          "size": [
-            42,
-            41,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "yellow",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/1.webp",
-          "sizeselect": 40,
-          "colorselect": "emerald",
-          "quantity": 2,
-          "totalPr": 490
-        },
-        {
-          "id": 8,
-          "title": "adidas",
-          "price": 98,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/8.webp",
-          "sizeselect": 44,
-          "colorselect": "teal",
-          "quantity": 3,
-          "totalPr": 294
-        },
-        {
-          "id": 50,
-          "title": "reebok",
-          "price": 125,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "reebok",
-          "images": "http://localhost:5173/public/products/reebok/2.webp",
-          "sizeselect": 40,
-          "colorselect": "gray",
-          "quantity": 1,
-          "totalPr": 125
-        },
-        {
-          "id": 4,
-          "title": "adidas",
-          "price": 223,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            39
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "adidas",
-          "images": "http://localhost:5173/public/products/adidas/4.webp",
-          "sizeselect": 39,
-          "colorselect": "rose",
-          "quantity": 1,
-          "totalPr": 223
-        },
-        {
-          "id": 18,
-          "title": "converse",
-          "price": 160,
-          "order": 0,
-          "size": [
-            44,
-            42,
-            40
-          ],
-          "color": [
-            "rose",
-            "emerald",
-            "teal",
-            "gray"
-          ],
-          "brand": "converse",
-          "images": "http://localhost:5173/public/products/converse/2.jpg",
-          "sizeselect": 40,
-          "colorselect": "rose",
-          "quantity": 2,
-          "totalPr": 320
-        }
-      ],
-      "cart": [
         {
           "id": 45,
           "title": "puma",
@@ -452,8 +132,55 @@
           "colorselect": "emerald",
           "quantity": 1,
           "totalPr": 399
+        },
+        {
+          "id": 4,
+          "title": "adidas",
+          "price": 223,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            39
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/public/products/adidas/4.webp",
+          "sizeselect": 39,
+          "colorselect": "rose",
+          "quantity": 1,
+          "totalPr": 223
+        },
+        {
+          "id": 6,
+          "title": "adidas",
+          "price": 45,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5173/public/products/adidas/6.webp",
+          "sizeselect": 42,
+          "colorselect": "emerald",
+          "quantity": 1,
+          "totalPr": 45
         }
-      ]
+      ],
+      "cart": []
     }
   ],
   "Products": [

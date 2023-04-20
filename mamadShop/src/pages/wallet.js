@@ -46,6 +46,9 @@ const wallet = async () => {
                 El({
                   element: "button",
                   className: "",
+                  onclick: () => {
+                    Router().navigate("/search");
+                  },
                   children: [
                     El({
                       element: "img",

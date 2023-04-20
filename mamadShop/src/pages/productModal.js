@@ -67,11 +67,15 @@ const productModal = async (dataid) => {
                       const clone = res.data;
                       clone.wishlist.push(data);
                       postproductone(1, clone);
+                      document
+                        .getElementById("likebtn-wishlist")
+                        .classList.add("hidden");
                     });
                   },
                   children: [
                     El({
                       element: "img",
+                      id: "likebtn-wishlist",
                       className: "",
                       src: "http://localhost:5173/src/images/icon/like.svg",
                     }),
@@ -362,6 +366,7 @@ const productModal = async (dataid) => {
                   }
 
                   postproductone(1, clone);
+                  Router().navigate("/home");
                 });
                 // postproductone(1, data);
                 // console.log(

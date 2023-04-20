@@ -3,20 +3,19 @@
 import { Router } from "../functions/router";
 import { El } from "../library/el/El";
 import getproduct from "../functions/axios/getproduct";
-import { cartdata } from "../functions/axios/transferdata";
 
-const wishlist = async () => {
+const seeall = async () => {
   try {
-    const { data } = await cartdata();
-    // console.log(data.wishlist);
+    const { data } = await getproduct();
+
     return El({
       element: "div",
-      id: "wishlistPage",
+      id: "SeePage",
       className: "w-screen h-screen flex flex-col overflow-y-hidden",
       children: [
         El({
           element: "div",
-          id: "wishlistnav",
+          id: "Seenav",
           className: "p-4 flex items-center justify-between pt-8 px-6",
           children: [
             El({
@@ -40,7 +39,7 @@ const wishlist = async () => {
                 El({
                   element: "h1",
                   className: "text-2xl font-bold",
-                  children: "My Wishlist",
+                  children: "See All",
                 }),
               ],
             }),
@@ -48,10 +47,10 @@ const wishlist = async () => {
         }),
         El({
           element: "div",
-          id: "products-filter1",
+          id: "products-filter2",
           className:
-            "p-[24px] absolute w-full top-[80px] flex flex-wrap  gap-4 overflow-y-scroll no-scrollbar ",
-          children: data.wishlist.map((item) => {
+            "p-[24px] absolute w-full top-[80px] flex flex-wrap justify-center gap-4 overflow-y-scroll no-scrollbar ",
+          children: data.map((item) => {
             return El({
               element: "div",
               id: `${item.id}`,
@@ -83,33 +82,6 @@ const wishlist = async () => {
                       children: [`${item.title}`],
                     }),
                     El({
-                      element: "div",
-                      className: "flex items-center gap-2",
-                      children: [
-                        El({
-                          element: "img",
-                          className: "w-6",
-                          src: "http://localhost:5173/src/images/icon/star.svg",
-                        }),
-                        El({
-                          element: "p",
-                          className: "",
-                          children: ["4.3 |"],
-                        }),
-                        El({
-                          element: "div",
-                          className: "bg-gray-200 p-1 px-2 rounded-md",
-                          children: [
-                            El({
-                              element: "p",
-                              className: "text-[10px] font-[700]",
-                              children: ["5.371 sold"],
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                    El({
                       element: "p",
                       className: "font-[600] text-[16px]",
                       children: [`$ ${item.price}`],
@@ -127,4 +99,4 @@ const wishlist = async () => {
   }
 };
 
-export default wishlist;
+export default seeall;

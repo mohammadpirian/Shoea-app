@@ -103,6 +103,9 @@ const home = async () => {
                     "w-full h-[37px] bg-gray-100 border-none rounded-md px-8",
                   type: "text",
                   placeholder: "Search",
+                  onkeyup: () => {
+                    Router().navigate("/search");
+                  },
                 }),
                 El({
                   element: "img",
@@ -369,6 +372,9 @@ const home = async () => {
                       element: "button",
                       className: "font-[600] text-[16px]",
                       children: ["See All"],
+                      onclick: () => {
+                        Router().navigate("/seeall");
+                      },
                     }),
                   ],
                 }),
