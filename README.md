@@ -4,7 +4,6 @@ This is a web-based e-commerce project built using various technologies such as 
 
 ![portfolio-img5](https://github.com/mohammadpiriyan/Shoea-app/assets/50291430/8ddc291f-af15-4a60-bc23-c41ad6fbda72)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
 ## Features
