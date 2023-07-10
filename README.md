@@ -1,6 +1,6 @@
 # Shoea-app
 ## Project Description
-This is a web-based e-commerce project built using various technologies such as React, Next.js, Tailwind CSS, Redux Toolkit, React Query, and Toastify. The project includes features like a shopping cart and an admin panel that provides users with powerful capabilities.
+This is a web-based e-commerce project built using various technologies such as Vanila Js and json server. The project includes features like a shopping cart and a Product Catalog that provides users with powerful capabilities.
 
 ![portfolio-img5](https://github.com/mohammadpiriyan/Shoea-app/assets/50291430/8ddc291f-af15-4a60-bc23-c41ad6fbda72)
 
@@ -13,10 +13,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - **User Authentication:** Users can create an account, log in, and manage their profile information.
 - **Product Catalog:** A wide range of products are available for browsing, with details such as descriptions, prices, and images.
 - **Search and Filtering:** Users can easily search for products and apply filters based on categories, prices, etc.
-- **Admin Panel:** Administrators have access to a powerful admin panel to manage products, inventory, orders, and user accounts.
 - **Order Management:** Users can view their order history, track shipments, and manage returns and refunds.
 - **Payment Integration:** Secure payment processing is integrated to facilitate smooth and reliable transactions.
-- **Responsive Design:** The application is designed to work seamlessly on various devices, including desktops, tablets, and mobile phones.
 
 ## Getting Started
 
